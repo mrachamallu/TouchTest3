@@ -23,6 +23,14 @@ class HomeViewController: UIViewController {
     @IBAction func testToHome(segue:UIStoryboardSegue) {
         
     }
+    
+    @IBAction func testToHome2(segue:UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction func testToHome3(segue:UIStoryboardSegue) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

@@ -62,7 +62,7 @@
         <!--Draw Test View Controller-->
         <scene sceneID="T3X-ns-9AS">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="009-Fo-EjE" customClass="DrawTestViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" hidesBottomBarWhenPushed="YES" id="009-Fo-EjE" customClass="DrawTestViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ANI-TB-ivm"/>
                         <viewControllerLayoutGuide type="bottom" id="E4h-Nt-dU3"/>
@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="948" y="322"/>
         </scene>
-        <!--Draw Test View Controller-->
+        <!--Questionnaire View Controller-->
         <scene sceneID="Bd2-i7-aue">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="xvh-ES-cJe" customClass="DrawTestViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="xvh-ES-cJe" customClass="QuestionnaireViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lue-aw-dOc"/>
                         <viewControllerLayoutGuide type="bottom" id="p5d-ZB-Soa"/>
@@ -137,13 +137,16 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="npD-qY-lJQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="1. Depressed Mood?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="awO-J3-sE0" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
-                                <rect key="frame" x="67" y="118" width="241" height="31"/>
+                                <rect key="frame" x="67" y="171" width="241" height="31"/>
+                                <connections>
+                                    <action selector="question1changedWithSender:" destination="xvh-ES-cJe" eventType="valueChanged" id="v9j-QS-YeV"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7V0-fP-utx">
                                 <rect key="frame" x="0.0" y="226" width="375" height="51"/>
@@ -157,10 +160,7 @@
                                 </state>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ykD-FA-Kdo" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
-                                <rect key="frame" x="67" y="285" width="241" height="31"/>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-ZV-xsX" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
-                                <rect key="frame" x="67" y="448" width="241" height="31"/>
+                                <rect key="frame" x="67" y="296" width="241" height="31"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSb-E3-r6O">
                                 <rect key="frame" x="0.0" y="382" width="375" height="52"/>
@@ -183,33 +183,6 @@
                                     <segue destination="t4f-IV-LVd" kind="unwind" unwindAction="testToHomeWithSegue:" id="2l4-X6-oYa"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="waY-yj-voK">
-                                <rect key="frame" x="54" y="155" width="42" height="30"/>
-                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="ESD-k5-t0X"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sometimes" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsS-IR-WQN">
-                                <rect key="frame" x="144" y="155" width="86" height="30"/>
-                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Everyday for &gt;2 weeks" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UEi-Qf-2aK">
-                                <rect key="frame" x="269" y="155" width="83" height="49"/>
-                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="83" id="07R-Cb-p6D"/>
-                                </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvg-xt-WKt">
                                 <rect key="frame" x="316" y="627" width="50" height="32"/>
                                 <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -220,44 +193,84 @@
                                 <state key="normal" title=" Next ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ZMb-SG-AHd" kind="presentation" id="r5U-Sv-Gmm"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Everyday for &gt; 2 days" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NSf-aZ-ykH">
+                                <rect key="frame" x="257" y="118" width="82" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="Nda-VK-Zmd"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ssl-8c-Otv">
+                                <rect key="frame" x="35" y="118" width="82" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="UfH-1D-pri"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Occassionally" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d5o-hn-qkz">
+                                <rect key="frame" x="142" y="117" width="90" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-ZV-xsX" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
+                                <rect key="frame" x="67" y="453" width="241" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.47259062530000001" green="0.71703588959999998" blue="0.73697066310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gvn-iS-lKd" firstAttribute="trailing" secondItem="7V0-fP-utx" secondAttribute="trailing" id="1QY-5c-2MD"/>
                             <constraint firstItem="7V0-fP-utx" firstAttribute="centerX" secondItem="awO-J3-sE0" secondAttribute="centerX" id="1pG-h0-P5T"/>
-                            <constraint firstItem="MsS-IR-WQN" firstAttribute="top" secondItem="waY-yj-voK" secondAttribute="top" id="2CM-k0-FlZ"/>
-                            <constraint firstItem="waY-yj-voK" firstAttribute="top" secondItem="awO-J3-sE0" secondAttribute="bottom" constant="7" id="4p7-Wx-9p1"/>
                             <constraint firstItem="7V0-fP-utx" firstAttribute="centerX" secondItem="IpX-ZV-xsX" secondAttribute="centerX" id="5ZD-og-tJK"/>
-                            <constraint firstItem="7V0-fP-utx" firstAttribute="top" secondItem="awO-J3-sE0" secondAttribute="bottom" constant="78" id="6m9-f5-EfV"/>
+                            <constraint firstItem="7V0-fP-utx" firstAttribute="top" secondItem="awO-J3-sE0" secondAttribute="bottom" constant="25" id="6m9-f5-EfV"/>
                             <constraint firstItem="gvn-iS-lKd" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leading" id="76g-pI-KRP"/>
                             <constraint firstItem="ykD-FA-Kdo" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leadingMargin" constant="53" id="7R0-sW-OdT"/>
-                            <constraint firstItem="MsS-IR-WQN" firstAttribute="centerX" secondItem="awO-J3-sE0" secondAttribute="centerX" id="9e6-dL-me9"/>
-                            <constraint firstItem="ykD-FA-Kdo" firstAttribute="top" secondItem="7V0-fP-utx" secondAttribute="bottom" constant="8" id="AMN-MJ-aXb"/>
+                            <constraint firstItem="NSf-aZ-ykH" firstAttribute="leading" secondItem="d5o-hn-qkz" secondAttribute="trailing" constant="25" id="8vS-qn-VcU"/>
+                            <constraint firstItem="ykD-FA-Kdo" firstAttribute="top" secondItem="7V0-fP-utx" secondAttribute="bottom" constant="19" id="AMN-MJ-aXb"/>
                             <constraint firstItem="gvn-iS-lKd" firstAttribute="trailing" secondItem="uSb-E3-r6O" secondAttribute="trailing" id="Ad2-j2-iiG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Yvg-xt-WKt" secondAttribute="trailing" constant="-7" id="F3V-tl-bTc"/>
-                            <constraint firstItem="awO-J3-sE0" firstAttribute="top" secondItem="gvn-iS-lKd" secondAttribute="bottom" constant="8" id="F90-5H-zCe"/>
+                            <constraint firstItem="awO-J3-sE0" firstAttribute="top" secondItem="gvn-iS-lKd" secondAttribute="bottom" constant="61" id="F90-5H-zCe"/>
                             <constraint firstItem="gvn-iS-lKd" firstAttribute="leading" secondItem="uSb-E3-r6O" secondAttribute="leading" id="Gom-Uf-1aH"/>
                             <constraint firstItem="p5d-ZB-Soa" firstAttribute="top" secondItem="1E5-OC-660" secondAttribute="bottom" constant="8" id="HeY-jl-Iab"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ykD-FA-Kdo" secondAttribute="trailing" constant="53" id="Izk-Ev-JSA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UEi-Qf-2aK" secondAttribute="trailing" constant="7" id="LqZ-o5-8xM"/>
+                            <constraint firstItem="awO-J3-sE0" firstAttribute="top" secondItem="Ssl-8c-Otv" secondAttribute="bottom" constant="7" id="Lgk-SD-lx0"/>
+                            <constraint firstItem="Ssl-8c-Otv" firstAttribute="bottom" secondItem="NSf-aZ-ykH" secondAttribute="bottom" id="LsJ-iC-gGP"/>
                             <constraint firstItem="gvn-iS-lKd" firstAttribute="centerX" secondItem="IpX-ZV-xsX" secondAttribute="centerX" id="Lvv-Fb-Ivm"/>
                             <constraint firstItem="1E5-OC-660" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leading" constant="8" id="MCu-v0-T0S"/>
-                            <constraint firstItem="IpX-ZV-xsX" firstAttribute="top" secondItem="uSb-E3-r6O" secondAttribute="bottom" constant="14" id="NZh-de-Adg"/>
+                            <constraint firstItem="IpX-ZV-xsX" firstAttribute="top" secondItem="uSb-E3-r6O" secondAttribute="bottom" constant="19" id="NZh-de-Adg"/>
+                            <constraint firstItem="Ssl-8c-Otv" firstAttribute="top" secondItem="gvn-iS-lKd" secondAttribute="bottom" constant="8" symbolic="YES" id="QGn-N5-ZmB"/>
                             <constraint firstItem="awO-J3-sE0" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leadingMargin" constant="53" id="SNk-S6-Gpb"/>
                             <constraint firstItem="Yvg-xt-WKt" firstAttribute="baseline" secondItem="1E5-OC-660" secondAttribute="baseline" id="SXB-sk-Iog"/>
-                            <constraint firstItem="7V0-fP-utx" firstAttribute="top" secondItem="UEi-Qf-2aK" secondAttribute="bottom" constant="22" id="Suj-hQ-mqa"/>
+                            <constraint firstItem="Ssl-8c-Otv" firstAttribute="top" secondItem="NSf-aZ-ykH" secondAttribute="top" id="Wb3-9Q-1pE"/>
+                            <constraint firstItem="awO-J3-sE0" firstAttribute="top" secondItem="d5o-hn-qkz" secondAttribute="bottom" constant="8" symbolic="YES" id="Xyh-MW-39X"/>
                             <constraint firstItem="gvn-iS-lKd" firstAttribute="leading" secondItem="7V0-fP-utx" secondAttribute="leading" id="YQz-Vj-E4O"/>
-                            <constraint firstItem="waY-yj-voK" firstAttribute="top" secondItem="UEi-Qf-2aK" secondAttribute="top" id="YT4-AE-ucX"/>
-                            <constraint firstItem="uSb-E3-r6O" firstAttribute="top" secondItem="ykD-FA-Kdo" secondAttribute="bottom" constant="67" id="eNX-CM-jx4"/>
+                            <constraint firstItem="d5o-hn-qkz" firstAttribute="top" secondItem="gvn-iS-lKd" secondAttribute="bottom" constant="7" id="ZJW-Qf-VE3"/>
+                            <constraint firstItem="uSb-E3-r6O" firstAttribute="top" secondItem="ykD-FA-Kdo" secondAttribute="bottom" constant="56" id="eNX-CM-jx4"/>
                             <constraint firstAttribute="trailing" secondItem="gvn-iS-lKd" secondAttribute="trailing" id="gqs-4f-7g8"/>
                             <constraint firstItem="awO-J3-sE0" firstAttribute="leading" secondItem="IpX-ZV-xsX" secondAttribute="leading" id="hh4-dv-WQ3"/>
+                            <constraint firstItem="d5o-hn-qkz" firstAttribute="leading" secondItem="Ssl-8c-Otv" secondAttribute="trailing" constant="25" id="jNc-qs-GQJ"/>
                             <constraint firstItem="gvn-iS-lKd" firstAttribute="top" secondItem="Lue-aw-dOc" secondAttribute="bottom" constant="39" id="jUn-Yw-dAr"/>
-                            <constraint firstItem="waY-yj-voK" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leadingMargin" constant="38" id="kQV-Jg-UjC"/>
-                            <constraint firstItem="UEi-Qf-2aK" firstAttribute="leading" secondItem="MsS-IR-WQN" secondAttribute="trailing" constant="39" id="p4a-X0-zZZ"/>
+                            <constraint firstItem="Ssl-8c-Otv" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leadingMargin" constant="19" id="jsE-gZ-IHT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NSf-aZ-ykH" secondAttribute="trailing" constant="20" id="meV-VZ-OTy"/>
                             <constraint firstItem="gvn-iS-lKd" firstAttribute="centerX" secondItem="awO-J3-sE0" secondAttribute="centerX" id="vMd-wD-O8T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="question1" destination="awO-J3-sE0" id="sTj-8n-dIW"/>
+                        <outlet property="question2" destination="ykD-FA-Kdo" id="e5L-mq-YNC"/>
+                        <outlet property="question3" destination="IpX-ZV-xsX" id="f9t-z5-ykq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1YK-c7-vDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="t4f-IV-LVd" userLabel="Exit" sceneMemberID="exit"/>
@@ -335,6 +348,313 @@
                 <exit id="uUv-Dc-jN3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="948" y="-361"/>
+        </scene>
+        <!--Questionnaire View Controller-->
+        <scene sceneID="FBo-Gq-2ab">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="ZMb-SG-AHd" customClass="QuestionnaireViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="01l-Up-GfM"/>
+                        <viewControllerLayoutGuide type="bottom" id="QGh-Qr-VYX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GaL-SK-oGh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJk-sV-CHV">
+                                <rect key="frame" x="0.0" y="59" width="375" height="51"/>
+                                <color key="backgroundColor" red="0.1021442935" green="0.2835075259" blue="0.36465698479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="qSs-J4-CEd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="1. Depressed Mood?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ed0-GH-2yC" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
+                                <rect key="frame" x="67" y="171" width="241" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4l-tn-Dwd">
+                                <rect key="frame" x="0.0" y="226" width="375" height="51"/>
+                                <color key="backgroundColor" red="0.1021442935" green="0.2835075259" blue="0.36465698479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="7Is-Sm-jZo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="2. Loss of interest or pleasure in most or all activities">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YMa-Tr-u51" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
+                                <rect key="frame" x="67" y="296" width="241" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U97-nc-av3">
+                                <rect key="frame" x="0.0" y="382" width="375" height="52"/>
+                                <color key="backgroundColor" red="0.1021442935" green="0.2835075259" blue="0.36465698479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal">
+                                    <string key="title">3. Insomnia or hypersomnia
+</string>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COM-HV-peX">
+                                <rect key="frame" x="8" y="627" width="53" height="32"/>
+                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title=" Home ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Rf9-kN-u8y" kind="unwind" unwindAction="testToHome2WithSegue:" id="iVv-aI-D3r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzb-2x-RVe">
+                                <rect key="frame" x="316" y="627" width="50" height="32"/>
+                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bfd-GF-hiR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title=" Next ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sFb-aZ-x9p" kind="presentation" id="X1c-Qe-qid"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Everyday for &gt; 2 days" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L5f-le-gHo">
+                                <rect key="frame" x="257" y="118" width="82" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="sH9-Lx-ZLL"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wMK-3E-MzJ">
+                                <rect key="frame" x="35" y="118" width="82" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="fhu-X5-DZd"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Occassionally" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="arZ-Q6-aDm">
+                                <rect key="frame" x="142" y="117" width="90" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Avr-if-0lg" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
+                                <rect key="frame" x="67" y="453" width="241" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47259062530000001" green="0.71703588959999998" blue="0.73697066310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ed0-GH-2yC" firstAttribute="top" secondItem="arZ-Q6-aDm" secondAttribute="bottom" constant="8" symbolic="YES" id="1n8-Hh-1et"/>
+                            <constraint firstItem="AJk-sV-CHV" firstAttribute="trailing" secondItem="U97-nc-av3" secondAttribute="trailing" id="6Zc-3L-CZe"/>
+                            <constraint firstItem="AJk-sV-CHV" firstAttribute="leading" secondItem="GaL-SK-oGh" secondAttribute="leading" id="6eQ-gm-gQp"/>
+                            <constraint firstAttribute="trailing" secondItem="AJk-sV-CHV" secondAttribute="trailing" id="6tH-d3-B4f"/>
+                            <constraint firstItem="AJk-sV-CHV" firstAttribute="leading" secondItem="w4l-tn-Dwd" secondAttribute="leading" id="ANh-aH-FVv"/>
+                            <constraint firstItem="AJk-sV-CHV" firstAttribute="leading" secondItem="U97-nc-av3" secondAttribute="leading" id="ASE-Hk-nfK"/>
+                            <constraint firstItem="YMa-Tr-u51" firstAttribute="leading" secondItem="GaL-SK-oGh" secondAttribute="leadingMargin" constant="53" id="DRS-nZ-Eoy"/>
+                            <constraint firstItem="wMK-3E-MzJ" firstAttribute="top" secondItem="L5f-le-gHo" secondAttribute="top" id="Dna-uC-G9S"/>
+                            <constraint firstItem="wMK-3E-MzJ" firstAttribute="leading" secondItem="GaL-SK-oGh" secondAttribute="leadingMargin" constant="19" id="GQa-Ik-MPq"/>
+                            <constraint firstItem="QGh-Qr-VYX" firstAttribute="top" secondItem="COM-HV-peX" secondAttribute="bottom" constant="8" id="H5e-Wb-bHa"/>
+                            <constraint firstItem="Ed0-GH-2yC" firstAttribute="top" secondItem="AJk-sV-CHV" secondAttribute="bottom" constant="61" id="HkH-Iv-ODW"/>
+                            <constraint firstItem="Avr-if-0lg" firstAttribute="top" secondItem="U97-nc-av3" secondAttribute="bottom" constant="19" id="JM1-dB-hCN"/>
+                            <constraint firstItem="AJk-sV-CHV" firstAttribute="trailing" secondItem="w4l-tn-Dwd" secondAttribute="trailing" id="Oh2-t9-Y7q"/>
+                            <constraint firstItem="YMa-Tr-u51" firstAttribute="top" secondItem="w4l-tn-Dwd" secondAttribute="bottom" constant="19" id="Qy4-Yi-o86"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dzb-2x-RVe" secondAttribute="trailing" constant="-7" id="Rmf-fs-ycZ"/>
+                            <constraint firstItem="wMK-3E-MzJ" firstAttribute="top" secondItem="AJk-sV-CHV" secondAttribute="bottom" constant="8" symbolic="YES" id="Rvm-KY-rgs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L5f-le-gHo" secondAttribute="trailing" constant="20" id="Vc7-ni-CLc"/>
+                            <constraint firstItem="wMK-3E-MzJ" firstAttribute="bottom" secondItem="L5f-le-gHo" secondAttribute="bottom" id="amq-cT-1cE"/>
+                            <constraint firstItem="AJk-sV-CHV" firstAttribute="centerX" secondItem="Ed0-GH-2yC" secondAttribute="centerX" id="bCk-D1-DiW"/>
+                            <constraint firstItem="arZ-Q6-aDm" firstAttribute="top" secondItem="AJk-sV-CHV" secondAttribute="bottom" constant="7" id="dG4-if-p8Y"/>
+                            <constraint firstItem="U97-nc-av3" firstAttribute="top" secondItem="YMa-Tr-u51" secondAttribute="bottom" constant="56" id="ek8-ja-Vl7"/>
+                            <constraint firstItem="Ed0-GH-2yC" firstAttribute="leading" secondItem="Avr-if-0lg" secondAttribute="leading" id="flj-e2-Oaa"/>
+                            <constraint firstItem="arZ-Q6-aDm" firstAttribute="leading" secondItem="wMK-3E-MzJ" secondAttribute="trailing" constant="25" id="god-bt-8zp"/>
+                            <constraint firstItem="Ed0-GH-2yC" firstAttribute="top" secondItem="wMK-3E-MzJ" secondAttribute="bottom" constant="7" id="kak-zI-Wdg"/>
+                            <constraint firstItem="AJk-sV-CHV" firstAttribute="centerX" secondItem="Avr-if-0lg" secondAttribute="centerX" id="o2I-Ts-RdG"/>
+                            <constraint firstItem="w4l-tn-Dwd" firstAttribute="centerX" secondItem="Ed0-GH-2yC" secondAttribute="centerX" id="pJu-36-7EL"/>
+                            <constraint firstItem="AJk-sV-CHV" firstAttribute="top" secondItem="01l-Up-GfM" secondAttribute="bottom" constant="39" id="qs5-kI-Kv6"/>
+                            <constraint firstItem="L5f-le-gHo" firstAttribute="leading" secondItem="arZ-Q6-aDm" secondAttribute="trailing" constant="25" id="rsY-mR-6fn"/>
+                            <constraint firstItem="Ed0-GH-2yC" firstAttribute="leading" secondItem="GaL-SK-oGh" secondAttribute="leadingMargin" constant="53" id="sdA-9Y-Bda"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YMa-Tr-u51" secondAttribute="trailing" constant="53" id="u55-za-6PY"/>
+                            <constraint firstItem="w4l-tn-Dwd" firstAttribute="centerX" secondItem="Avr-if-0lg" secondAttribute="centerX" id="uJV-jz-9Ok"/>
+                            <constraint firstItem="w4l-tn-Dwd" firstAttribute="top" secondItem="Ed0-GH-2yC" secondAttribute="bottom" constant="25" id="uvs-gE-5lT"/>
+                            <constraint firstItem="Dzb-2x-RVe" firstAttribute="baseline" secondItem="COM-HV-peX" secondAttribute="baseline" id="yVi-xo-df6"/>
+                            <constraint firstItem="COM-HV-peX" firstAttribute="leading" secondItem="GaL-SK-oGh" secondAttribute="leading" constant="8" id="zrT-fs-jWd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="question4" destination="Ed0-GH-2yC" id="hSP-pw-VVc"/>
+                        <outlet property="question5" destination="YMa-Tr-u51" id="7DK-qj-8kX"/>
+                        <outlet property="question6" destination="Avr-if-0lg" id="5g8-hH-kwY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDR-Gg-6vC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Rf9-kN-u8y" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2388" y="322"/>
+        </scene>
+        <!--Questionnaire View Controller-->
+        <scene sceneID="UZA-4O-4Ma">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="sFb-aZ-x9p" customClass="QuestionnaireViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S5U-HE-TKE"/>
+                        <viewControllerLayoutGuide type="bottom" id="5MF-DY-SN8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PSy-cA-cec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e11-Xl-fb4">
+                                <rect key="frame" x="0.0" y="59" width="375" height="51"/>
+                                <color key="backgroundColor" red="0.1021442935" green="0.2835075259" blue="0.36465698479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Miq-0h-eCX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="1. Depressed Mood?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XWv-Ll-7iP" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
+                                <rect key="frame" x="67" y="171" width="241" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgO-v5-lWr">
+                                <rect key="frame" x="0.0" y="226" width="375" height="51"/>
+                                <color key="backgroundColor" red="0.1021442935" green="0.2835075259" blue="0.36465698479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Imj-hB-6WO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="2. Loss of interest or pleasure in most or all activities">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-Ym-m5N" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
+                                <rect key="frame" x="67" y="296" width="241" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-UL-ibR">
+                                <rect key="frame" x="0.0" y="382" width="375" height="52"/>
+                                <color key="backgroundColor" red="0.1021442935" green="0.2835075259" blue="0.36465698479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal">
+                                    <string key="title">3. Insomnia or hypersomnia
+</string>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNJ-pM-Vvw">
+                                <rect key="frame" x="8" y="627" width="53" height="32"/>
+                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title=" Home ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Tni-E1-SKM" kind="unwind" unwindAction="testToHome3WithSegue:" id="cPb-GK-fw3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzP-X8-o0h">
+                                <rect key="frame" x="316" y="627" width="50" height="32"/>
+                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="YNg-J9-bMZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title=" Next ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Everyday for &gt; 2 days" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LeQ-rX-mYW">
+                                <rect key="frame" x="257" y="118" width="82" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="Dj0-TT-0F0"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-d4-FzH">
+                                <rect key="frame" x="35" y="118" width="82" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="to6-o5-euy"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Occassionally" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JsP-dG-NQ3">
+                                <rect key="frame" x="142" y="117" width="90" height="46"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bNo-xM-MWT" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
+                                <rect key="frame" x="67" y="453" width="241" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47259062530000001" green="0.71703588959999998" blue="0.73697066310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="e11-Xl-fb4" secondAttribute="trailing" id="0KY-mX-FJO"/>
+                            <constraint firstItem="fwY-d4-FzH" firstAttribute="top" secondItem="LeQ-rX-mYW" secondAttribute="top" id="3sO-lg-50e"/>
+                            <constraint firstItem="HeE-UL-ibR" firstAttribute="top" secondItem="wO7-Ym-m5N" secondAttribute="bottom" constant="56" id="4mR-He-G8R"/>
+                            <constraint firstItem="e11-Xl-fb4" firstAttribute="trailing" secondItem="HeE-UL-ibR" secondAttribute="trailing" id="6E5-Da-aSJ"/>
+                            <constraint firstItem="lNJ-pM-Vvw" firstAttribute="leading" secondItem="PSy-cA-cec" secondAttribute="leading" constant="8" id="6hU-3L-5ny"/>
+                            <constraint firstItem="e11-Xl-fb4" firstAttribute="trailing" secondItem="hgO-v5-lWr" secondAttribute="trailing" id="7xa-Fh-xFR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wO7-Ym-m5N" secondAttribute="trailing" constant="53" id="BcH-Xm-lWg"/>
+                            <constraint firstItem="e11-Xl-fb4" firstAttribute="leading" secondItem="HeE-UL-ibR" secondAttribute="leading" id="C36-Ve-nDk"/>
+                            <constraint firstItem="JsP-dG-NQ3" firstAttribute="leading" secondItem="fwY-d4-FzH" secondAttribute="trailing" constant="25" id="D1Y-4s-pjd"/>
+                            <constraint firstItem="hgO-v5-lWr" firstAttribute="centerX" secondItem="XWv-Ll-7iP" secondAttribute="centerX" id="EPh-nl-gLB"/>
+                            <constraint firstItem="wO7-Ym-m5N" firstAttribute="leading" secondItem="PSy-cA-cec" secondAttribute="leadingMargin" constant="53" id="EYI-Yv-BwX"/>
+                            <constraint firstItem="e11-Xl-fb4" firstAttribute="top" secondItem="S5U-HE-TKE" secondAttribute="bottom" constant="39" id="JFV-rC-KYp"/>
+                            <constraint firstItem="XWv-Ll-7iP" firstAttribute="leading" secondItem="bNo-xM-MWT" secondAttribute="leading" id="KC8-rY-PNB"/>
+                            <constraint firstItem="e11-Xl-fb4" firstAttribute="leading" secondItem="hgO-v5-lWr" secondAttribute="leading" id="KRS-Mo-KFc"/>
+                            <constraint firstItem="fwY-d4-FzH" firstAttribute="leading" secondItem="PSy-cA-cec" secondAttribute="leadingMargin" constant="19" id="Mwo-Ly-NMk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rzP-X8-o0h" secondAttribute="trailing" constant="-7" id="NKj-2x-w16"/>
+                            <constraint firstItem="e11-Xl-fb4" firstAttribute="leading" secondItem="PSy-cA-cec" secondAttribute="leading" id="Ngv-mD-2z4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LeQ-rX-mYW" secondAttribute="trailing" constant="20" id="OPF-9L-UKg"/>
+                            <constraint firstItem="hgO-v5-lWr" firstAttribute="centerX" secondItem="bNo-xM-MWT" secondAttribute="centerX" id="PLL-we-dKV"/>
+                            <constraint firstItem="e11-Xl-fb4" firstAttribute="centerX" secondItem="XWv-Ll-7iP" secondAttribute="centerX" id="Uu2-G8-jvq"/>
+                            <constraint firstItem="wO7-Ym-m5N" firstAttribute="top" secondItem="hgO-v5-lWr" secondAttribute="bottom" constant="19" id="YA4-06-uDd"/>
+                            <constraint firstItem="bNo-xM-MWT" firstAttribute="top" secondItem="HeE-UL-ibR" secondAttribute="bottom" constant="19" id="ZQD-Lh-CxV"/>
+                            <constraint firstItem="rzP-X8-o0h" firstAttribute="baseline" secondItem="lNJ-pM-Vvw" secondAttribute="baseline" id="eU9-rf-Jfg"/>
+                            <constraint firstItem="5MF-DY-SN8" firstAttribute="top" secondItem="lNJ-pM-Vvw" secondAttribute="bottom" constant="8" id="f7H-rw-fnd"/>
+                            <constraint firstItem="LeQ-rX-mYW" firstAttribute="leading" secondItem="JsP-dG-NQ3" secondAttribute="trailing" constant="25" id="ij3-jh-AWP"/>
+                            <constraint firstItem="e11-Xl-fb4" firstAttribute="centerX" secondItem="bNo-xM-MWT" secondAttribute="centerX" id="jOB-iI-tUl"/>
+                            <constraint firstItem="JsP-dG-NQ3" firstAttribute="top" secondItem="e11-Xl-fb4" secondAttribute="bottom" constant="7" id="kru-8N-2pG"/>
+                            <constraint firstItem="XWv-Ll-7iP" firstAttribute="top" secondItem="fwY-d4-FzH" secondAttribute="bottom" constant="7" id="ml0-G6-HVe"/>
+                            <constraint firstItem="XWv-Ll-7iP" firstAttribute="top" secondItem="JsP-dG-NQ3" secondAttribute="bottom" constant="8" symbolic="YES" id="nyl-2z-ezN"/>
+                            <constraint firstItem="XWv-Ll-7iP" firstAttribute="top" secondItem="e11-Xl-fb4" secondAttribute="bottom" constant="61" id="ohM-8v-YBz"/>
+                            <constraint firstItem="fwY-d4-FzH" firstAttribute="bottom" secondItem="LeQ-rX-mYW" secondAttribute="bottom" id="t2I-7p-Rcg"/>
+                            <constraint firstItem="hgO-v5-lWr" firstAttribute="top" secondItem="XWv-Ll-7iP" secondAttribute="bottom" constant="25" id="uJ8-c0-hAs"/>
+                            <constraint firstItem="fwY-d4-FzH" firstAttribute="top" secondItem="e11-Xl-fb4" secondAttribute="bottom" constant="8" symbolic="YES" id="wlZ-Oj-DQc"/>
+                            <constraint firstItem="XWv-Ll-7iP" firstAttribute="leading" secondItem="PSy-cA-cec" secondAttribute="leadingMargin" constant="53" id="x2e-1u-ZNK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="question7" destination="XWv-Ll-7iP" id="V1v-Lw-Zlc"/>
+                        <outlet property="question8" destination="wO7-Ym-m5N" id="Cai-CV-KiR"/>
+                        <outlet property="question9" destination="bNo-xM-MWT" id="Shw-yh-AOf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jie-AJ-3AG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Tni-E1-SKM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3122" y="322"/>
         </scene>
     </scenes>
     <resources>
