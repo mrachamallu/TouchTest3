@@ -1,0 +1,12 @@
+PODS:
+  - JMMarkSliderSwift (1.0.0)
+
+DEPENDENCIES:
+  - JMMarkSliderSwift
+
+SPEC CHECKSUMS:
+  JMMarkSliderSwift: c1f375dd4c6a6a1fa6a726d33d7c3941727a2c4e
+
+PODFILE CHECKSUM: 1d8cf798685822a6bcd8ee066eb764da79ea22e3
+
+COCOAPODS: 1.2.1
