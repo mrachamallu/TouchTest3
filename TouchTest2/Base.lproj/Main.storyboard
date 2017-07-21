@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VfJ-M7-6WR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m12-vc-p8k">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,19 +45,33 @@
                                     <segue destination="009-Fo-EjE" kind="presentation" identifier="chooseDepTest" id="W83-za-cgY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69l-4L-POh">
+                                <rect key="frame" x="110" y="426" width="154" height="38"/>
+                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <state key="normal" title=" Touch Test ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XlZ-Av-J0r" kind="presentation" id="uAo-Gy-kxe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.47259062530000001" green="0.71703588959999998" blue="0.73697066310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="JsM-Ye-1sy" firstAttribute="top" secondItem="69l-4L-POh" secondAttribute="bottom" constant="17" id="Jfe-qm-AkF"/>
                             <constraint firstItem="JsM-Ye-1sy" firstAttribute="centerX" secondItem="0jr-NR-sxD" secondAttribute="centerX" id="TiF-dI-Tko"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t39-E1-IW3" secondAttribute="trailing" constant="-8" id="W30-C4-ieK"/>
+                            <constraint firstItem="69l-4L-POh" firstAttribute="leading" secondItem="JsM-Ye-1sy" secondAttribute="leading" id="Wa8-Ns-vVL"/>
                             <constraint firstItem="t39-E1-IW3" firstAttribute="top" secondItem="XaF-fd-mTz" secondAttribute="bottom" id="lcH-hu-LZD"/>
                             <constraint firstItem="JsM-Ye-1sy" firstAttribute="centerY" secondItem="0jr-NR-sxD" secondAttribute="centerY" constant="166.5" id="wo7-Ct-bXd"/>
+                            <constraint firstItem="69l-4L-POh" firstAttribute="trailing" secondItem="JsM-Ye-1sy" secondAttribute="trailing" id="wph-On-Az4"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDe-2T-Wb5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="37"/>
+            <point key="canvasLocation" x="165.59999999999999" y="36.431784107946029"/>
         </scene>
         <!--Draw Test View Controller-->
         <scene sceneID="T3X-ns-9AS">
@@ -117,7 +131,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUc-XZ-15Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="rlR-9q-PrX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="948" y="322"/>
+            <point key="canvasLocation" x="948" y="122"/>
         </scene>
         <!--Questionnaire View Controller-->
         <scene sceneID="Bd2-i7-aue">
@@ -275,7 +289,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1YK-c7-vDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="t4f-IV-LVd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1677.5999999999999" y="321.58920539730138"/>
+            <point key="canvasLocation" x="1711" y="122"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AOk-Gy-5zg">
@@ -347,7 +361,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VN0-8B-qnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uUv-Dc-jN3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="948" y="-361"/>
+            <point key="canvasLocation" x="948" y="-557"/>
         </scene>
         <!--Questionnaire View Controller-->
         <scene sceneID="FBo-Gq-2ab">
@@ -368,7 +382,7 @@
                                     <constraint firstAttribute="height" constant="51" id="qSs-J4-CEd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="1. Depressed Mood?">
+                                <state key="normal" title="4. Change in appetite or weight?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -382,7 +396,7 @@
                                     <constraint firstAttribute="height" constant="51" id="7Is-Sm-jZo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="2. Loss of interest or pleasure in most or all activities">
+                                <state key="normal" title="5. Psychomotor retardation or agitation?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -394,7 +408,7 @@
                                 <color key="backgroundColor" red="0.1021442935" green="0.2835075259" blue="0.36465698479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal">
-                                    <string key="title">3. Insomnia or hypersomnia
+                                    <string key="title">6. Low energy?
 </string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -502,7 +516,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDR-Gg-6vC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Rf9-kN-u8y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2388" y="322"/>
+            <point key="canvasLocation" x="2490" y="122"/>
         </scene>
         <!--Questionnaire View Controller-->
         <scene sceneID="UZA-4O-4Ma">
@@ -523,7 +537,7 @@
                                     <constraint firstAttribute="height" constant="51" id="Miq-0h-eCX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="1. Depressed Mood?">
+                                <state key="normal" title="7. Poor concentration?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -537,7 +551,7 @@
                                     <constraint firstAttribute="height" constant="51" id="Imj-hB-6WO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="2. Loss of interest or pleasure in most or all activities">
+                                <state key="normal" title="8. Thoughts of worthlessnes or guilt?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -549,7 +563,7 @@
                                 <color key="backgroundColor" red="0.1021442935" green="0.2835075259" blue="0.36465698479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal">
-                                    <string key="title">3. Insomnia or hypersomnia
+                                    <string key="title">9. Recurrent thoughts about death or suicide?
 </string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -654,7 +668,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jie-AJ-3AG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Tni-E1-SKM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3122" y="322"/>
+            <point key="canvasLocation" x="3281" y="122"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9cD-xT-Efd">
@@ -670,7 +684,24 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEG-FG-7RS" customClass="DrawingView" customModule="TouchTest2" customModuleProvider="target">
                                 <rect key="frame" x="16" y="38" width="343" height="609"/>
-                                <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPa-4G-y3r">
+                                        <rect key="frame" x="-8" y="587" width="53" height="32"/>
+                                        <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                        <state key="normal" title=" Home ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ImO-1s-9q0" kind="unwind" unwindAction="DrawingViewtoHomeWithSegue:" id="MiN-Tz-5xF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FPa-4G-y3r" secondAttribute="bottom" constant="-10" id="ZDY-Jl-aOZ"/>
+                                    <constraint firstItem="FPa-4G-y3r" firstAttribute="leading" secondItem="aEG-FG-7RS" secondAttribute="leading" constant="-8" id="dhP-c5-C3X"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -686,8 +717,69 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gva-0u-lFL" sceneMemberID="firstResponder"/>
+                <exit id="ImO-1s-9q0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="948" y="1022"/>
+            <point key="canvasLocation" x="1710" y="820"/>
+        </scene>
+        <!--Draw Test View Controller-->
+        <scene sceneID="HAS-lH-8vb">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" hidesBottomBarWhenPushed="YES" id="XlZ-Av-J0r" customClass="DrawTestViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="phy-je-dJy"/>
+                        <viewControllerLayoutGuide type="bottom" id="R3K-PI-10q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R8x-NB-UEk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeS-VQ-bIG">
+                                <rect key="frame" x="8" y="627" width="53" height="32"/>
+                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title=" Home ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ohk-Ee-ni0" kind="unwind" unwindAction="homeWithSegue:" id="gPE-Kq-dq0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmT-VA-wvO">
+                                <rect key="frame" x="159" y="485" width="56" height="38"/>
+                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <state key="normal" title=" Start ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VfJ-M7-6WR" kind="presentation" id="WNk-CV-NiP"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Directions" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ypi-1g-acQ">
+                                <rect key="frame" x="66" y="182" width="242" height="195"/>
+                                <color key="backgroundColor" red="0.16818413139999999" green="0.41790887710000002" blue="0.51205831769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47259062530000001" green="0.71703588959999998" blue="0.73697066310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="R3K-PI-10q" firstAttribute="top" secondItem="BeS-VQ-bIG" secondAttribute="bottom" constant="8" id="8qI-W4-80B"/>
+                            <constraint firstItem="Ypi-1g-acQ" firstAttribute="centerY" secondItem="R8x-NB-UEk" secondAttribute="centerY" constant="-54" id="SuM-gd-AV9"/>
+                            <constraint firstItem="gmT-VA-wvO" firstAttribute="centerX" secondItem="R8x-NB-UEk" secondAttribute="centerX" id="XSu-Pl-4g8"/>
+                            <constraint firstItem="BeS-VQ-bIG" firstAttribute="leading" secondItem="R8x-NB-UEk" secondAttribute="leading" constant="8" id="aGZ-VN-mRX"/>
+                            <constraint firstItem="Ypi-1g-acQ" firstAttribute="top" secondItem="phy-je-dJy" secondAttribute="bottom" constant="162" id="raA-Vw-GXY"/>
+                            <constraint firstItem="gmT-VA-wvO" firstAttribute="centerY" secondItem="R8x-NB-UEk" secondAttribute="centerY" constant="170.5" id="uFq-Fr-hv8"/>
+                            <constraint firstItem="Ypi-1g-acQ" firstAttribute="centerX" secondItem="R8x-NB-UEk" secondAttribute="centerX" id="uV0-bv-TK4"/>
+                            <constraint firstItem="Ypi-1g-acQ" firstAttribute="leading" secondItem="R8x-NB-UEk" secondAttribute="leadingMargin" constant="50" id="xbA-oP-rtj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0lY-jX-yxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ohk-Ee-ni0" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="838"/>
         </scene>
     </scenes>
     <resources>
