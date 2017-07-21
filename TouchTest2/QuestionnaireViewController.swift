@@ -27,7 +27,10 @@ class QuestionnaireViewController: UIViewController {
     
     @IBAction func question1changed(sender: JMMarkSlider) {
         let currentValue = Int(sender.value)
+        print(currentValue)
         totalVal = currentValue + totalVal
+        
+        //print(totalVal)
     }
    //sets tick numbers for all sliders for all questions
     func setPos(question: JMMarkSlider)
@@ -38,7 +41,6 @@ class QuestionnaireViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         question1.markPositions = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-        print(totalVal)
         
         //setting tick numbers
         /*

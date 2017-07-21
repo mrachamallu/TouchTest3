@@ -14,6 +14,8 @@
 		667E92091F14360F00DBA3B2 /* DrawTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E92071F14360F00DBA3B2 /* DrawTestViewController.swift */; };
 		667E920A1F14360F00DBA3B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E92081F14360F00DBA3B2 /* HomeViewController.swift */; };
 		669A13D71F1FFB4F006BCE4E /* QuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A13D61F1FFB4F006BCE4E /* QuestionnaireViewController.swift */; };
+		669A13E71F21C120006BCE4E /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A13E61F21C120006BCE4E /* DrawingView.swift */; };
+		669A13E91F21C1BB006BCE4E /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A13E81F21C1BB006BCE4E /* DrawViewController.swift */; };
 		6AE30D2C959D653417852971 /* Pods_TouchTest2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C6655986E5C1E8606F0745 /* Pods_TouchTest2.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		667E92071F14360F00DBA3B2 /* DrawTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawTestViewController.swift; sourceTree = "<group>"; };
 		667E92081F14360F00DBA3B2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		669A13D61F1FFB4F006BCE4E /* QuestionnaireViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewController.swift; sourceTree = "<group>"; };
+		669A13E61F21C120006BCE4E /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		669A13E81F21C1BB006BCE4E /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 		B3C6655986E5C1E8606F0745 /* Pods_TouchTest2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TouchTest2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60B109B876D981A07F12AC6 /* Pods-TouchTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchTest2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TouchTest2/Pods-TouchTest2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +74,8 @@
 				667E91F91F1435B600DBA3B2 /* Main.storyboard */,
 				667E91FC1F1435B600DBA3B2 /* Assets.xcassets */,
 				667E91FE1F1435B600DBA3B2 /* LaunchScreen.storyboard */,
+				669A13E61F21C120006BCE4E /* DrawingView.swift */,
+				669A13E81F21C1BB006BCE4E /* DrawViewController.swift */,
 				667E92011F1435B600DBA3B2 /* Info.plist */,
 				667E92071F14360F00DBA3B2 /* DrawTestViewController.swift */,
 				669A13D61F1FFB4F006BCE4E /* QuestionnaireViewController.swift */,
@@ -218,8 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669A13E91F21C1BB006BCE4E /* DrawViewController.swift in Sources */,
 				667E92091F14360F00DBA3B2 /* DrawTestViewController.swift in Sources */,
 				667E91F61F1435B600DBA3B2 /* AppDelegate.swift in Sources */,
+				669A13E71F21C120006BCE4E /* DrawingView.swift in Sources */,
 				669A13D71F1FFB4F006BCE4E /* QuestionnaireViewController.swift in Sources */,
 				667E920A1F14360F00DBA3B2 /* HomeViewController.swift in Sources */,
 			);

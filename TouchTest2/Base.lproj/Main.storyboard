@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m12-vc-p8k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VfJ-M7-6WR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -655,6 +655,39 @@
                 <exit id="Tni-E1-SKM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3122" y="322"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9cD-xT-Efd">
+            <objects>
+                <viewController id="VfJ-M7-6WR" customClass="ViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ahK-cR-TGj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Beh-vK-0lp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0ZU-kR-P9I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEG-FG-7RS" customClass="DrawableView" customModule="TouchTest2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="38" width="343" height="609"/>
+                                <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aEG-FG-7RS" firstAttribute="trailing" secondItem="0ZU-kR-P9I" secondAttribute="trailingMargin" id="6ng-26-zCJ"/>
+                            <constraint firstItem="aEG-FG-7RS" firstAttribute="top" secondItem="ahK-cR-TGj" secondAttribute="bottom" constant="18" id="bfw-RR-O5G"/>
+                            <constraint firstItem="Beh-vK-0lp" firstAttribute="top" secondItem="aEG-FG-7RS" secondAttribute="bottom" constant="20" id="cFN-G6-0iX"/>
+                            <constraint firstItem="aEG-FG-7RS" firstAttribute="leading" secondItem="0ZU-kR-P9I" secondAttribute="leadingMargin" id="dzy-GJ-cpE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawingView" destination="aEG-FG-7RS" id="9z1-6z-8pR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gva-0u-lFL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="1022"/>
         </scene>
     </scenes>
     <resources>
