@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -656,10 +657,10 @@
             </objects>
             <point key="canvasLocation" x="3122" y="322"/>
         </scene>
-        <!--View Controller-->
+        <!--Draw View Controller-->
         <scene sceneID="9cD-xT-Efd">
             <objects>
-                <viewController id="VfJ-M7-6WR" customClass="ViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VfJ-M7-6WR" customClass="DrawViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ahK-cR-TGj"/>
                         <viewControllerLayoutGuide type="bottom" id="Beh-vK-0lp"/>
@@ -670,7 +671,47 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEG-FG-7RS" customClass="DrawingView" customModule="TouchTest2" customModuleProvider="target">
                                 <rect key="frame" x="16" y="38" width="343" height="609"/>
-                                <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trace the letter below as closely as possible" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68J-zA-Yc7">
+                                        <rect key="frame" x="17" y="0.0" width="336" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="BLS-OJ-y67"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A" translatesAutoresizingMaskIntoConstraints="NO" id="w1L-YM-dKY">
+                                        <rect key="frame" x="20" y="153" width="302" height="302"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="w1L-YM-dKY" secondAttribute="height" multiplier="1:1" id="5FX-CT-sKZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttr-Ye-ydS">
+                                        <rect key="frame" x="285" y="577" width="50" height="32"/>
+                                        <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="zhK-Cd-cu9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                        <state key="normal" title=" Next ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="NextButton:" destination="VfJ-M7-6WR" eventType="touchUpInside" id="vGb-o0-4il"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="68J-zA-Yc7" firstAttribute="top" secondItem="aEG-FG-7RS" secondAttribute="top" id="6qz-UB-RdB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ttr-Ye-ydS" secondAttribute="trailing" constant="8" id="EoS-Xb-5X7"/>
+                                    <constraint firstItem="w1L-YM-dKY" firstAttribute="centerY" secondItem="aEG-FG-7RS" secondAttribute="centerY" id="MB3-ug-Jq6"/>
+                                    <constraint firstAttribute="trailing" secondItem="68J-zA-Yc7" secondAttribute="trailing" constant="-10" id="P2e-v8-PId"/>
+                                    <constraint firstItem="68J-zA-Yc7" firstAttribute="leading" secondItem="aEG-FG-7RS" secondAttribute="leadingMargin" constant="9" id="dth-uA-Zp0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ttr-Ye-ydS" secondAttribute="bottom" id="rx6-KS-FoI"/>
+                                    <constraint firstItem="w1L-YM-dKY" firstAttribute="centerX" secondItem="aEG-FG-7RS" secondAttribute="centerX" id="yiA-Gq-REx"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -687,10 +728,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gva-0u-lFL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="1022"/>
+            <point key="canvasLocation" x="948" y="1021.4392803598201"/>
         </scene>
     </scenes>
     <resources>
+        <image name="A" width="240" height="302"/>
         <image name="cross" width="24" height="24"/>
         <image name="info" width="28" height="28"/>
     </resources>

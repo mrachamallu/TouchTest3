@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DrawingView: UIView {
 	
 	var drawColor = UIColor.black
 	var lineWidth: CGFloat = 5
+    var outOfBounds: Int = 0 //use to track if it goes out of bounds
+    var inBounds: Int = 0 //^^ in bounds
 	
 	private var lastPoint: CGPoint!
 	private var bezierPath: UIBezierPath!
@@ -54,6 +57,48 @@ class DrawingView: UIView {
 		bezierPath.move(to: lastPoint)
 		bezierPath.addLine(to: newPoint)
 		lastPoint = newPoint
+        
+        //for the letter A
+        // "/": (25, 450) to (170, 160) with slope 2
+        // "\": (170, 160) to (315, 450) with slope -2
+        // "-": (75, 347) to (265, 347) with slope 0
+        
+        let yCoord1: CGFloat = (-2)*lastPoint.x + 500
+        let yCoord2: CGFloat = (2)*lastPoint.x - 180
+        let Correction: CGFloat = 30
+        
+        if ((lastPoint.y < 160 - Correction) || (lastPoint.y > 450 + Correction)
+            || (lastPoint.x < 25 - Correction) || (lastPoint.x > 315 + Correction))
+        {
+            outOfBounds += 1
+            AudioServicesPlaySystemSound(1200)
+            print("1200")
+        }
+        else if (((lastPoint.x > 75) && (lastPoint.x < 265))
+            && ((lastPoint.y < 347 + Correction) && (lastPoint.y > 347 - Correction)))
+        {
+            inBounds += 1
+            //AudioServicesPlaySystemSound(1201)
+            print("1201")
+        }
+        else if (((lastPoint.x > 25 - Correction) && (lastPoint.x < 170 + Correction)) && ((lastPoint.y < yCoord1 + Correction) && (lastPoint.y > yCoord1 - Correction)))
+        {
+            inBounds += 1
+            //AudioServicesPlaySystemSound(1202)
+            print("1202")
+        }
+        else if (((lastPoint.x > 170 - Correction) && (lastPoint.x < 315 + Correction)) && ((lastPoint.y < yCoord2 + Correction) && (lastPoint.y > yCoord2 - Correction)))
+        {
+            inBounds += 1
+            //AudioServicesPlaySystemSound(1203)
+            print("1203")
+        }
+        else
+        {
+            outOfBounds += 1
+            AudioServicesPlaySystemSound(1204)
+            print("1204")
+        }
 		
 		pointCounter += 1
 		
@@ -99,7 +144,7 @@ class DrawingView: UIView {
 	}
 	
 	// MARK: - Render
-	
+
 	override func draw(_ rect: CGRect) {
 		super.draw(rect)
 		
@@ -119,6 +164,8 @@ class DrawingView: UIView {
 		preRenderImage = nil
 		bezierPath.removeAllPoints()
 		setNeedsDisplay()
+        inBounds = 0
+        outOfBounds = 0
 	}
 	
 	// MARK: - Other

@@ -8,10 +8,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DrawViewController: UIViewController {
 
 	@IBOutlet weak var drawingView: DrawingView!
 	
+    @IBAction func NextButton(_ sender: Any) {
+        print(drawingView.outOfBounds)
+        print(drawingView.inBounds)
+        var message: String?
+        if (drawingView.outOfBounds * 10 > drawingView.inBounds){
+            message = "You seem to have motor disorder"
+        }
+        else{
+            message = "You don't seem to have a motor disorder"
+        }
+        
+        let alert = UIAlertController(title: "Results", message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: drawingView.clear)
+        
+    }
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.

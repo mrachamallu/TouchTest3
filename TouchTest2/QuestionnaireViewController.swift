@@ -13,7 +13,7 @@ import JMMarkSliderSwift
 class QuestionnaireViewController: UIViewController {
 
     @IBOutlet weak var question1: JMMarkSlider!
-    @IBOutlet weak var question2: JMMarkSlider!
+/*    @IBOutlet weak var question2: JMMarkSlider!
     @IBOutlet weak var question3: JMMarkSlider!
     @IBOutlet weak var question4: JMMarkSlider!
     @IBOutlet weak var question5: JMMarkSlider!
@@ -21,7 +21,7 @@ class QuestionnaireViewController: UIViewController {
     @IBOutlet weak var question7: JMMarkSlider!
     @IBOutlet weak var question8: JMMarkSlider!
     @IBOutlet weak var question9: JMMarkSlider!
-    
+    */
 
     var totalVal = 0
     
@@ -33,11 +33,12 @@ class QuestionnaireViewController: UIViewController {
         //print(totalVal)
     }
    //sets tick numbers for all sliders for all questions
-    func setPos(question: JMMarkSlider)
+/*    func setPos(question: JMMarkSlider)
     {
         question.markPositions = [0, 10, 20, 30, 4, 5, 6, 7, 8, 300]
     }
     
+ */
     override func viewDidLoad() {
         super.viewDidLoad()
         question1.markPositions = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
@@ -56,6 +57,7 @@ class QuestionnaireViewController: UIViewController {
  */
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
