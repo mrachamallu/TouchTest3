@@ -10,13 +10,15 @@ import UIKit
 
 class DrawViewController: UIViewController {
 
-	@IBOutlet weak var drawingView: DrawingView!
+	//@IBOutlet weak var drawingView: DrawingView!
+    @IBOutlet weak var drawingView2: DrawingView2!
+    var multiplierForDecision: Int?
 	
-    @IBAction func NextButton(_ sender: Any) {
+   /* @IBAction func NextButton(_ sender: Any) {
         print(drawingView.outOfBounds)
         print(drawingView.inBounds)
         var message: String?
-        if (drawingView.outOfBounds * 10 > drawingView.inBounds){
+        if (drawingView.outOfBounds * multiplierForDecision! > drawingView.inBounds){
             message = "You seem to have motor disorder"
         }
         else{
@@ -27,9 +29,12 @@ class DrawViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: drawingView.clear)
         
-    }
+    } */
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        multiplierForDecision = 10
+        drawingView2.Correction = 30
+
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VfJ-M7-6WR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lb3-au-5fw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -46,11 +46,42 @@
                                     <segue destination="009-Fo-EjE" kind="presentation" identifier="chooseDepTest" id="W83-za-cgY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h55-OX-JZY">
+                                <rect key="frame" x="110" y="425" width="154" height="38"/>
+                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <state key="normal" title=" Touch Test ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jmn-Lb-4Kb" kind="presentation" id="0Sh-P8-Nmm"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="*For educational purposes only" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g9G-3g-Zyb">
+                                <rect key="frame" x="67" y="630" width="240" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="VhL-RK-cet"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="handheart-1" translatesAutoresizingMaskIntoConstraints="NO" id="vJ4-g3-HJf">
+                                <rect key="frame" x="36" y="152" width="303" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.47259062530000001" green="0.71703588959999998" blue="0.73697066310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="g9G-3g-Zyb" firstAttribute="centerX" secondItem="JsM-Ye-1sy" secondAttribute="centerX" id="8au-3W-leU"/>
+                            <constraint firstItem="g9G-3g-Zyb" firstAttribute="leading" secondItem="0jr-NR-sxD" secondAttribute="leadingMargin" constant="51" id="GLv-lZ-hZ3"/>
+                            <constraint firstItem="JsM-Ye-1sy" firstAttribute="top" secondItem="h55-OX-JZY" secondAttribute="bottom" constant="18" id="HhC-qy-ytg"/>
+                            <constraint firstItem="nSW-Jp-SJs" firstAttribute="top" secondItem="g9G-3g-Zyb" secondAttribute="bottom" constant="8" symbolic="YES" id="N5e-hy-Wje"/>
                             <constraint firstItem="JsM-Ye-1sy" firstAttribute="centerX" secondItem="0jr-NR-sxD" secondAttribute="centerX" id="TiF-dI-Tko"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t39-E1-IW3" secondAttribute="trailing" constant="-8" id="W30-C4-ieK"/>
+                            <constraint firstItem="h55-OX-JZY" firstAttribute="leading" secondItem="JsM-Ye-1sy" secondAttribute="leading" id="fE6-ta-EKX"/>
+                            <constraint firstItem="h55-OX-JZY" firstAttribute="trailing" secondItem="JsM-Ye-1sy" secondAttribute="trailing" id="jLT-Rb-HGM"/>
                             <constraint firstItem="t39-E1-IW3" firstAttribute="top" secondItem="XaF-fd-mTz" secondAttribute="bottom" id="lcH-hu-LZD"/>
                             <constraint firstItem="JsM-Ye-1sy" firstAttribute="centerY" secondItem="0jr-NR-sxD" secondAttribute="centerY" constant="166.5" id="wo7-Ct-bXd"/>
                         </constraints>
@@ -58,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDe-2T-Wb5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="37"/>
+            <point key="canvasLocation" x="165.59999999999999" y="36.431784107946029"/>
         </scene>
         <!--Draw Test View Controller-->
         <scene sceneID="T3X-ns-9AS">
@@ -139,7 +170,7 @@
                                     <constraint firstAttribute="height" constant="51" id="npD-qY-lJQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="1. Depressed Mood?">
+                                <state key="normal" title="1. Depressed Mood">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -162,6 +193,9 @@
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ykD-FA-Kdo" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
                                 <rect key="frame" x="67" y="296" width="241" height="31"/>
+                                <connections>
+                                    <action selector="question2changedWithSender:" destination="xvh-ES-cJe" eventType="valueChanged" id="M0A-Ol-fDk"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSb-E3-r6O">
                                 <rect key="frame" x="0.0" y="382" width="375" height="52"/>
@@ -227,6 +261,9 @@
                             </textView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-ZV-xsX" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
                                 <rect key="frame" x="67" y="453" width="241" height="31"/>
+                                <connections>
+                                    <action selector="question3changedWithSender:" destination="xvh-ES-cJe" eventType="valueChanged" id="Hpy-Qq-K2k"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.47259062530000001" green="0.71703588959999998" blue="0.73697066310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -333,12 +370,25 @@
                                     <segue destination="uUv-Dc-jN3" kind="unwind" unwindAction="closeWithSegue:" id="1Ve-29-0Az"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Created by Ayush Patel and Meera Rachamallu" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Qf-9l-P2m">
+                                <rect key="frame" x="16" y="638" width="344" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="wU7-TZ-4B4"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.47259062530000001" green="0.71703588959999998" blue="0.73697066310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="5Qf-9l-P2m" firstAttribute="leading" secondItem="doA-io-2F7" secondAttribute="leadingMargin" id="1yp-1p-93v"/>
                             <constraint firstItem="9fL-Vg-M4N" firstAttribute="leading" secondItem="doA-io-2F7" secondAttribute="leadingMargin" constant="19" id="BPP-cX-Sct"/>
+                            <constraint firstItem="5Qf-9l-P2m" firstAttribute="bottom" secondItem="gR3-k4-0CZ" secondAttribute="top" id="Hdd-xa-b6h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oWW-36-WiI" secondAttribute="trailing" constant="20" id="NBy-RF-PpJ"/>
                             <constraint firstItem="9fL-Vg-M4N" firstAttribute="centerX" secondItem="doA-io-2F7" secondAttribute="centerX" id="Wrz-kR-R6O"/>
+                            <constraint firstItem="5Qf-9l-P2m" firstAttribute="centerX" secondItem="doA-io-2F7" secondAttribute="centerX" id="YIf-yH-5R8"/>
                             <constraint firstItem="oWW-36-WiI" firstAttribute="top" secondItem="PYe-7u-Rgr" secondAttribute="bottom" constant="31" id="fKf-Zz-O0F"/>
                             <constraint firstItem="9fL-Vg-M4N" firstAttribute="top" secondItem="PYe-7u-Rgr" secondAttribute="bottom" constant="59" id="gEd-4o-d9l"/>
                             <constraint firstItem="9fL-Vg-M4N" firstAttribute="centerY" secondItem="doA-io-2F7" secondAttribute="centerY" id="jq3-AY-pkT"/>
@@ -348,7 +398,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VN0-8B-qnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uUv-Dc-jN3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="948" y="-361"/>
+            <point key="canvasLocation" x="948" y="-361.16941529235385"/>
         </scene>
         <!--Questionnaire View Controller-->
         <scene sceneID="FBo-Gq-2ab">
@@ -369,12 +419,16 @@
                                     <constraint firstAttribute="height" constant="51" id="qSs-J4-CEd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="1. Depressed Mood?">
+                                <state key="normal">
+                                    <string key="title">4. Change in appetite or weight</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ed0-GH-2yC" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
                                 <rect key="frame" x="67" y="171" width="241" height="31"/>
+                                <connections>
+                                    <action selector="question4changedWithSender:" destination="ZMb-SG-AHd" eventType="valueChanged" id="LZB-Vs-xEg"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4l-tn-Dwd">
                                 <rect key="frame" x="0.0" y="226" width="375" height="51"/>
@@ -383,19 +437,22 @@
                                     <constraint firstAttribute="height" constant="51" id="7Is-Sm-jZo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="2. Loss of interest or pleasure in most or all activities">
+                                <state key="normal" title="5. Psychomotor retardation or agitation">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YMa-Tr-u51" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
                                 <rect key="frame" x="67" y="296" width="241" height="31"/>
+                                <connections>
+                                    <action selector="question5changedWithSender:" destination="ZMb-SG-AHd" eventType="valueChanged" id="hpM-nK-KBk"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U97-nc-av3">
                                 <rect key="frame" x="0.0" y="382" width="375" height="52"/>
                                 <color key="backgroundColor" red="0.1021442935" green="0.2835075259" blue="0.36465698479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal">
-                                    <string key="title">3. Insomnia or hypersomnia
+                                    <string key="title">6. Low energy
 </string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -454,6 +511,9 @@
                             </textView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Avr-if-0lg" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
                                 <rect key="frame" x="67" y="453" width="241" height="31"/>
+                                <connections>
+                                    <action selector="question6changedWithSender:" destination="ZMb-SG-AHd" eventType="valueChanged" id="4qc-zi-BF2"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.47259062530000001" green="0.71703588959999998" blue="0.73697066310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -524,12 +584,15 @@
                                     <constraint firstAttribute="height" constant="51" id="Miq-0h-eCX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="1. Depressed Mood?">
+                                <state key="normal" title="7. Poor concentration">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XWv-Ll-7iP" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
                                 <rect key="frame" x="67" y="171" width="241" height="31"/>
+                                <connections>
+                                    <action selector="question7changedWithSender:" destination="sFb-aZ-x9p" eventType="valueChanged" id="ZGB-0o-aab"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgO-v5-lWr">
                                 <rect key="frame" x="0.0" y="226" width="375" height="51"/>
@@ -538,20 +601,23 @@
                                     <constraint firstAttribute="height" constant="51" id="Imj-hB-6WO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="2. Loss of interest or pleasure in most or all activities">
+                                <state key="normal">
+                                    <string key="title">8. Thoughts of worthlessness or guilt</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-Ym-m5N" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
                                 <rect key="frame" x="67" y="296" width="241" height="31"/>
+                                <connections>
+                                    <action selector="question8changedWithSender:" destination="sFb-aZ-x9p" eventType="valueChanged" id="vna-3x-wy4"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-UL-ibR">
                                 <rect key="frame" x="0.0" y="382" width="375" height="52"/>
                                 <color key="backgroundColor" red="0.1021442935" green="0.2835075259" blue="0.36465698479999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal">
-                                    <string key="title">3. Insomnia or hypersomnia
-</string>
+                                    <string key="title">9. Recurrent thoughts about death or suicidea o</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -606,6 +672,9 @@
                             </textView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bNo-xM-MWT" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
                                 <rect key="frame" x="67" y="453" width="241" height="31"/>
+                                <connections>
+                                    <action selector="question9changedWithSender:" destination="sFb-aZ-x9p" eventType="valueChanged" id="tNo-Pw-YnZ"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.47259062530000001" green="0.71703588959999998" blue="0.73697066310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -728,12 +797,148 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gva-0u-lFL" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="1021.4392803598201"/>
+            <point key="canvasLocation" x="1678" y="1013"/>
+        </scene>
+        <!--Draw Test View Controller-->
+        <scene sceneID="jIE-Ch-ZNU">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" hidesBottomBarWhenPushed="YES" id="Jmn-Lb-4Kb" customClass="DrawTestViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7LA-4f-H7C"/>
+                        <viewControllerLayoutGuide type="bottom" id="gMA-ZF-6Ad"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oZC-KZ-pQf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCD-1g-TxD">
+                                <rect key="frame" x="8" y="627" width="53" height="32"/>
+                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title=" Home ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UKS-Ca-k7T" kind="unwind" unwindAction="homeWithSegue:" id="nwc-5j-sYu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ef-uD-iYM">
+                                <rect key="frame" x="159" y="485" width="56" height="38"/>
+                                <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <state key="normal" title=" Start ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="VfJ-M7-6WR" kind="presentation" id="Aq3-ps-AB8"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Directions" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-9s-9jI">
+                                <rect key="frame" x="66" y="182" width="242" height="195"/>
+                                <color key="backgroundColor" red="0.16818413139999999" green="0.41790887710000002" blue="0.51205831769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47259062530000001" green="0.71703588959999998" blue="0.73697066310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gMA-ZF-6Ad" firstAttribute="top" secondItem="sCD-1g-TxD" secondAttribute="bottom" constant="8" id="4yp-wc-whJ"/>
+                            <constraint firstItem="3Zc-9s-9jI" firstAttribute="centerX" secondItem="oZC-KZ-pQf" secondAttribute="centerX" id="NyK-5a-U1Z"/>
+                            <constraint firstItem="sCD-1g-TxD" firstAttribute="leading" secondItem="oZC-KZ-pQf" secondAttribute="leading" constant="8" id="TIU-fQ-Abt"/>
+                            <constraint firstItem="3Zc-9s-9jI" firstAttribute="leading" secondItem="oZC-KZ-pQf" secondAttribute="leadingMargin" constant="50" id="cPy-WF-krr"/>
+                            <constraint firstItem="9ef-uD-iYM" firstAttribute="centerY" secondItem="oZC-KZ-pQf" secondAttribute="centerY" constant="170.5" id="hSE-qT-ZwO"/>
+                            <constraint firstItem="9ef-uD-iYM" firstAttribute="centerX" secondItem="oZC-KZ-pQf" secondAttribute="centerX" id="jl4-an-qmu"/>
+                            <constraint firstItem="3Zc-9s-9jI" firstAttribute="top" secondItem="7LA-4f-H7C" secondAttribute="bottom" constant="162" id="rlq-lq-tYr"/>
+                            <constraint firstItem="3Zc-9s-9jI" firstAttribute="centerY" secondItem="oZC-KZ-pQf" secondAttribute="centerY" constant="-54" id="yQV-7d-w2g"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqk-Bp-bmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="UKS-Ca-k7T" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="1014"/>
+        </scene>
+        <!--Draw View Controller-->
+        <scene sceneID="D7A-g1-BhV">
+            <objects>
+                <viewController id="Lb3-au-5fw" customClass="DrawViewController" customModule="TouchTest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KoH-PI-MY8"/>
+                        <viewControllerLayoutGuide type="bottom" id="KYa-Cf-XzO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1D7-gL-qZ9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6h-5m-Yhp" customClass="DrawingView2" customModule="TouchTest2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="38" width="343" height="609"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trace the letter below as closely as possible" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZE-w0-Z5X">
+                                        <rect key="frame" x="17" y="0.0" width="336" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="GFL-4r-8LA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcX-Ew-cYH">
+                                        <rect key="frame" x="285" y="577" width="50" height="32"/>
+                                        <color key="backgroundColor" red="0.28390145300000003" green="0.55422449110000005" blue="0.62763106820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="uqe-bT-PH4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                        <state key="normal" title=" Next ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="NextButton:" destination="Lb3-au-5fw" eventType="touchUpInside" id="M16-iV-vQ8"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="O" translatesAutoresizingMaskIntoConstraints="NO" id="UK1-MY-24I">
+                                        <rect key="frame" x="12" y="145" width="318" height="318"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="318" id="7Ee-az-mpw"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bcX-Ew-cYH" secondAttribute="bottom" id="DHE-6v-swP"/>
+                                    <constraint firstAttribute="trailing" secondItem="bcX-Ew-cYH" secondAttribute="trailing" constant="8" id="Pc8-aT-iqo"/>
+                                    <constraint firstItem="FZE-w0-Z5X" firstAttribute="leading" secondItem="f6h-5m-Yhp" secondAttribute="leadingMargin" constant="9" id="QPB-eC-8Za"/>
+                                    <constraint firstItem="FZE-w0-Z5X" firstAttribute="top" secondItem="f6h-5m-Yhp" secondAttribute="top" id="X22-3k-6ux"/>
+                                    <constraint firstItem="UK1-MY-24I" firstAttribute="leading" secondItem="FZE-w0-Z5X" secondAttribute="leading" constant="-5" id="dSd-lv-7Tg"/>
+                                    <constraint firstItem="UK1-MY-24I" firstAttribute="trailing" secondItem="bcX-Ew-cYH" secondAttribute="trailing" constant="-5" id="pgZ-eb-thk"/>
+                                    <constraint firstAttribute="trailing" secondItem="FZE-w0-Z5X" secondAttribute="trailing" constant="-10" id="qU0-bK-xtz"/>
+                                    <constraint firstItem="UK1-MY-24I" firstAttribute="top" secondItem="f6h-5m-Yhp" secondAttribute="top" constant="145" id="wtE-Wp-WVk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f6h-5m-Yhp" firstAttribute="trailing" secondItem="1D7-gL-qZ9" secondAttribute="trailingMargin" id="Oyx-RA-hlz"/>
+                            <constraint firstItem="f6h-5m-Yhp" firstAttribute="top" secondItem="KoH-PI-MY8" secondAttribute="bottom" constant="18" id="UXY-Ff-dSt"/>
+                            <constraint firstItem="f6h-5m-Yhp" firstAttribute="leading" secondItem="1D7-gL-qZ9" secondAttribute="leadingMargin" id="Xrn-M5-WUS"/>
+                            <constraint firstItem="KYa-Cf-XzO" firstAttribute="top" secondItem="f6h-5m-Yhp" secondAttribute="bottom" constant="20" id="zH1-S0-LiB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawingView2" destination="f6h-5m-Yhp" id="1Fj-mE-UpV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgy-PH-96j" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2474" y="1013"/>
         </scene>
     </scenes>
     <resources>
         <image name="A" width="240" height="302"/>
+        <image name="O" width="600" height="582"/>
         <image name="cross" width="24" height="24"/>
+        <image name="handheart-1" width="486" height="259"/>
         <image name="info" width="28" height="28"/>
     </resources>
 </document>

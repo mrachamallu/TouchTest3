@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		660AF0DA1F25692700B976EF /* DrawingView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AF0D91F25692700B976EF /* DrawingView2.swift */; };
 		667E91F61F1435B600DBA3B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E91F51F1435B600DBA3B2 /* AppDelegate.swift */; };
 		667E91FB1F1435B600DBA3B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 667E91F91F1435B600DBA3B2 /* Main.storyboard */; };
 		667E91FD1F1435B600DBA3B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 667E91FC1F1435B600DBA3B2 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		2C26F57E338F5A60592074E7 /* Pods-TouchTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchTest2.release.xcconfig"; path = "Pods/Target Support Files/Pods-TouchTest2/Pods-TouchTest2.release.xcconfig"; sourceTree = "<group>"; };
+		660AF0D91F25692700B976EF /* DrawingView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView2.swift; sourceTree = "<group>"; };
 		667E91F21F1435B600DBA3B2 /* TouchTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		667E91F51F1435B600DBA3B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		667E91FA1F1435B600DBA3B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				667E92011F1435B600DBA3B2 /* Info.plist */,
 				667E92071F14360F00DBA3B2 /* DrawTestViewController.swift */,
 				669A13D61F1FFB4F006BCE4E /* QuestionnaireViewController.swift */,
+				660AF0D91F25692700B976EF /* DrawingView2.swift */,
 			);
 			path = TouchTest2;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				669A13E91F21C1BB006BCE4E /* DrawViewController.swift in Sources */,
 				667E92091F14360F00DBA3B2 /* DrawTestViewController.swift in Sources */,
+				660AF0DA1F25692700B976EF /* DrawingView2.swift in Sources */,
 				667E91F61F1435B600DBA3B2 /* AppDelegate.swift in Sources */,
 				669A13E71F21C120006BCE4E /* DrawingView.swift in Sources */,
 				669A13D71F1FFB4F006BCE4E /* QuestionnaireViewController.swift in Sources */,

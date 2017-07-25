@@ -15,6 +15,7 @@ class DrawingView: UIView {
 	var lineWidth: CGFloat = 5
     var outOfBounds: Int = 0 //use to track if it goes out of bounds
     var inBounds: Int = 0 //^^ in bounds
+    var Correction: CGFloat = 0
 	
 	private var lastPoint: CGPoint!
 	private var bezierPath: UIBezierPath!
@@ -65,7 +66,6 @@ class DrawingView: UIView {
         
         let yCoord1: CGFloat = (-2)*lastPoint.x + 500
         let yCoord2: CGFloat = (2)*lastPoint.x - 180
-        let Correction: CGFloat = 30
         
         if ((lastPoint.y < 160 - Correction) || (lastPoint.y > 450 + Correction)
             || (lastPoint.x < 25 - Correction) || (lastPoint.x > 315 + Correction))
@@ -111,6 +111,7 @@ class DrawingView: UIView {
 		else {
 			setNeedsDisplay()
 		}
+ 
 	}
 	
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

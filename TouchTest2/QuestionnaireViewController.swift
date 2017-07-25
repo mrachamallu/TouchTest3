@@ -13,7 +13,7 @@ import JMMarkSliderSwift
 class QuestionnaireViewController: UIViewController {
 
     @IBOutlet weak var question1: JMMarkSlider!
-/*    @IBOutlet weak var question2: JMMarkSlider!
+    @IBOutlet weak var question2: JMMarkSlider!
     @IBOutlet weak var question3: JMMarkSlider!
     @IBOutlet weak var question4: JMMarkSlider!
     @IBOutlet weak var question5: JMMarkSlider!
@@ -21,40 +21,53 @@ class QuestionnaireViewController: UIViewController {
     @IBOutlet weak var question7: JMMarkSlider!
     @IBOutlet weak var question8: JMMarkSlider!
     @IBOutlet weak var question9: JMMarkSlider!
-    */
+    
 
-    var totalVal = 0
+    var totalVal = Double()
     
     @IBAction func question1changed(sender: JMMarkSlider) {
-        let currentValue = Int(sender.value)
-        print(currentValue)
-        totalVal = currentValue + totalVal
         
-        //print(totalVal)
-    }
-   //sets tick numbers for all sliders for all questions
-/*    func setPos(question: JMMarkSlider)
-    {
-        question.markPositions = [0, 10, 20, 30, 4, 5, 6, 7, 8, 300]
+        totalVal = Double(sender.value)
+        print(totalVal)
     }
     
- */
+    @IBAction func question2changed(sender: JMMarkSlider) {
+        
+        totalVal += Double(sender.value)
+    }
+    @IBAction func question3changed(sender: JMMarkSlider) {
+        
+        totalVal += Double(sender.value)
+    }
+    @IBAction func question4changed(sender: JMMarkSlider) {
+        
+        totalVal += Double(sender.value)
+    }
+    @IBAction func question5changed(sender: JMMarkSlider) {
+        
+        totalVal += Double(sender.value)
+    }
+    @IBAction func question6changed(sender: JMMarkSlider) {
+        
+        totalVal += Double(sender.value)
+    }
+    @IBAction func question7changed(sender: JMMarkSlider) {
+        
+        totalVal += Double(sender.value)
+    }
+    @IBAction func question8changed(sender: JMMarkSlider) {
+        
+        totalVal += Double(sender.value)
+    }
+    @IBAction func question9changed(sender: JMMarkSlider) {
+        
+        totalVal += Double(sender.value)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        question1.markPositions = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-        
-        //setting tick numbers
-        /*
-        setPos(question: question1)
-        setPos(question: question2)
-        setPos(question: question3)
-        setPos(question: question4)
-        setPos(question: question5)
-        setPos(question: question6)
-        setPos(question: question7)
-        setPos(question: question8)
-        setPos(question: question9)
- */
+        print(totalVal)
+        //question1.markPositions = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
         // Do any additional setup after loading the view.
     }
     
