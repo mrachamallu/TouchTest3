@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A5730131F2925E3001F8EEF /* testResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5730121F2925E3001F8EEF /* testResult.swift */; };
 		660AF0DA1F25692700B976EF /* DrawingView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660AF0D91F25692700B976EF /* DrawingView2.swift */; };
 		667E91F61F1435B600DBA3B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E91F51F1435B600DBA3B2 /* AppDelegate.swift */; };
 		667E91FB1F1435B600DBA3B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 667E91F91F1435B600DBA3B2 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A5730121F2925E3001F8EEF /* testResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testResult.swift; sourceTree = "<group>"; };
 		2C26F57E338F5A60592074E7 /* Pods-TouchTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TouchTest2.release.xcconfig"; path = "Pods/Target Support Files/Pods-TouchTest2/Pods-TouchTest2.release.xcconfig"; sourceTree = "<group>"; };
 		660AF0D91F25692700B976EF /* DrawingView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView2.swift; sourceTree = "<group>"; };
 		667E91F21F1435B600DBA3B2 /* TouchTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 				667E91F51F1435B600DBA3B2 /* AppDelegate.swift */,
 				667E92081F14360F00DBA3B2 /* HomeViewController.swift */,
 				667E91F91F1435B600DBA3B2 /* Main.storyboard */,
+				2A5730121F2925E3001F8EEF /* testResult.swift */,
 				667E91FC1F1435B600DBA3B2 /* Assets.xcassets */,
 				667E91FE1F1435B600DBA3B2 /* LaunchScreen.storyboard */,
 				669A13E61F21C120006BCE4E /* DrawingView.swift */,
@@ -229,6 +232,7 @@
 			files = (
 				669A13E91F21C1BB006BCE4E /* DrawViewController.swift in Sources */,
 				667E92091F14360F00DBA3B2 /* DrawTestViewController.swift in Sources */,
+				2A5730131F2925E3001F8EEF /* testResult.swift in Sources */,
 				660AF0DA1F25692700B976EF /* DrawingView2.swift in Sources */,
 				667E91F61F1435B600DBA3B2 /* AppDelegate.swift in Sources */,
 				669A13E71F21C120006BCE4E /* DrawingView.swift in Sources */,
