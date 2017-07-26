@@ -209,65 +209,72 @@
                                     <constraint firstAttribute="height" constant="50" id="1Lm-1s-vfI"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8E1-ke-hgW">
-                                <rect key="frame" x="5" y="136" width="365" height="395"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="8E1-ke-hgW">
+                                <rect key="frame" x="5" y="161" width="365" height="345"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvn-iS-lKd">
-                                        <rect key="frame" x="116.5" y="0.0" width="132" height="51"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="51" id="npD-qY-lJQ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="GillSans-LightItalic" family="Gill Sans" pointSize="18"/>
-                                        <state key="normal" title="1. Depressed Mood">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="awO-J3-sE0" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
-                                        <rect key="frame" x="23" y="81" width="319" height="31"/>
-                                        <connections>
-                                            <action selector="question1changedWithSender:" destination="xvh-ES-cJe" eventType="valueChanged" id="v9j-QS-YeV"/>
-                                        </connections>
-                                    </slider>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7V0-fP-utx">
-                                        <rect key="frame" x="8" y="141" width="349" height="51"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="51" id="JDc-gx-5af"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="GillSans-LightItalic" family="Gill Sans" pointSize="18"/>
-                                        <state key="normal" title="2. Loss of interest or pleasure in most or all activities">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ykD-FA-Kdo" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
-                                        <rect key="frame" x="23" y="222" width="319" height="31"/>
-                                        <connections>
-                                            <action selector="question2changedWithSender:" destination="xvh-ES-cJe" eventType="valueChanged" id="M0A-Ol-fDk"/>
-                                        </connections>
-                                    </slider>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSb-E3-r6O">
-                                        <rect key="frame" x="90.5" y="282" width="184" height="53"/>
-                                        <fontDescription key="fontDescription" name="GillSans-LightItalic" family="Gill Sans" pointSize="18"/>
-                                        <state key="normal">
-                                            <string key="title">3. Insomnia or hypersomnia
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CUq-xA-gd5">
+                                        <rect key="frame" x="36" y="0.0" width="293" height="81"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvn-iS-lKd">
+                                                <rect key="frame" x="80.5" y="0.0" width="132" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="npD-qY-lJQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GillSans-LightItalic" family="Gill Sans" pointSize="18"/>
+                                                <state key="normal" title="1. Depressed Mood">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="awO-J3-sE0" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
+                                                <rect key="frame" x="-2" y="51" width="297" height="31"/>
+                                                <connections>
+                                                    <action selector="question1changedWithSender:" destination="xvh-ES-cJe" eventType="valueChanged" id="v9j-QS-YeV"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XWe-Cd-JnJ">
+                                        <rect key="frame" x="8" y="131" width="349" height="81"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7V0-fP-utx">
+                                                <rect key="frame" x="0.0" y="0.0" width="349" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="JDc-gx-5af"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GillSans-LightItalic" family="Gill Sans" pointSize="18"/>
+                                                <state key="normal" title="2. Loss of interest or pleasure in most or all activities">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ykD-FA-Kdo" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
+                                                <rect key="frame" x="26" y="51" width="297" height="31"/>
+                                                <connections>
+                                                    <action selector="question2changedWithSender:" destination="xvh-ES-cJe" eventType="valueChanged" id="M0A-Ol-fDk"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Zf-v5-Aen">
+                                        <rect key="frame" x="36" y="262" width="293" height="83"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSb-E3-r6O">
+                                                <rect key="frame" x="54.5" y="0.0" width="184" height="53"/>
+                                                <fontDescription key="fontDescription" name="GillSans-LightItalic" family="Gill Sans" pointSize="18"/>
+                                                <state key="normal">
+                                                    <string key="title">3. Insomnia or hypersomnia
 </string>
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-ZV-xsX" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
-                                        <rect key="frame" x="23" y="365" width="319" height="31"/>
-                                        <connections>
-                                            <action selector="question3changedWithSender:" destination="xvh-ES-cJe" eventType="valueChanged" id="Hpy-Qq-K2k"/>
-                                        </connections>
-                                    </slider>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-ZV-xsX" customClass="JMMarkSlider" customModule="JMMarkSliderSwift">
+                                                <rect key="frame" x="-2" y="53" width="297" height="31"/>
+                                                <connections>
+                                                    <action selector="question3changedWithSender:" destination="xvh-ES-cJe" eventType="valueChanged" id="Hpy-Qq-K2k"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="IpX-ZV-xsX" firstAttribute="leading" secondItem="8E1-ke-hgW" secondAttribute="leading" constant="25" id="H71-XA-vOT"/>
-                                    <constraint firstAttribute="trailing" secondItem="awO-J3-sE0" secondAttribute="trailing" constant="25" id="HfY-Mj-ymC"/>
-                                    <constraint firstAttribute="trailing" secondItem="IpX-ZV-xsX" secondAttribute="trailing" constant="25" id="dOC-RU-Pir"/>
-                                    <constraint firstAttribute="trailing" secondItem="ykD-FA-Kdo" secondAttribute="trailing" constant="25" id="ea0-sY-nXF"/>
-                                    <constraint firstItem="awO-J3-sE0" firstAttribute="leading" secondItem="8E1-ke-hgW" secondAttribute="leading" constant="25" id="gXF-Zp-Zq4"/>
-                                    <constraint firstItem="ykD-FA-Kdo" firstAttribute="leading" secondItem="8E1-ke-hgW" secondAttribute="leading" constant="25" id="lNY-89-jdd"/>
-                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate on this scale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zc-xM-ht4">
                                 <rect key="frame" x="119" y="40" width="137.5" height="21.5"/>
@@ -303,9 +310,15 @@
                         <constraints>
                             <constraint firstItem="8E1-ke-hgW" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leading" constant="5" id="5g2-Pg-wus"/>
                             <constraint firstItem="p5d-ZB-Soa" firstAttribute="top" secondItem="SDI-tY-wcc" secondAttribute="bottom" id="FoE-vg-hiZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="awO-J3-sE0" secondAttribute="trailing" constant="25" id="IiV-Oo-vQm"/>
+                            <constraint firstItem="ykD-FA-Kdo" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leadingMargin" constant="25" id="OM8-Uy-wdc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IpX-ZV-xsX" secondAttribute="trailing" constant="25" id="RoH-pe-OB5"/>
+                            <constraint firstItem="awO-J3-sE0" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leadingMargin" constant="25" id="TnH-wA-AyJ"/>
                             <constraint firstItem="9zc-xM-ht4" firstAttribute="top" secondItem="Lue-aw-dOc" secondAttribute="bottom" constant="20" id="Uds-iW-9nm"/>
                             <constraint firstItem="SDI-tY-wcc" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leading" id="Un3-wv-GZh"/>
                             <constraint firstItem="9zc-xM-ht4" firstAttribute="centerX" secondItem="RBx-kP-Nnm" secondAttribute="centerX" id="V68-E5-sXf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ykD-FA-Kdo" secondAttribute="trailing" constant="25" id="YTz-zA-meU"/>
+                            <constraint firstItem="IpX-ZV-xsX" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leadingMargin" constant="25" id="Yop-L6-Xmc"/>
                             <constraint firstItem="4Uu-yX-xEd" firstAttribute="top" secondItem="9zc-xM-ht4" secondAttribute="bottom" constant="20" id="aJl-fb-YLi"/>
                             <constraint firstItem="4Uu-yX-xEd" firstAttribute="leading" secondItem="RBx-kP-Nnm" secondAttribute="leading" constant="25" id="hp7-tu-Sek"/>
                             <constraint firstAttribute="trailing" secondItem="4Uu-yX-xEd" secondAttribute="trailing" constant="25" id="kzo-Jt-zjG"/>
@@ -950,7 +963,7 @@ a o</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgy-PH-96j" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2474" y="1013"/>
+            <point key="canvasLocation" x="2388" y="1013"/>
         </scene>
     </scenes>
     <resources>
