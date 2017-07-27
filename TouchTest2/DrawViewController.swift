@@ -10,11 +10,22 @@ import UIKit
 
 class DrawViewController: UIViewController {
 
-	//@IBOutlet weak var drawingView: DrawingView!
+	@IBOutlet weak var drawingView: DrawingView!
     @IBOutlet weak var drawingView2: DrawingView2!
     var multiplierForDecision: Int?
 	
-   /* @IBAction func NextButton(_ sender: Any) {
+    
+   @IBAction func resultButton(_ sender: Any) {
+    testResult.Oresult = drawingView2.outOfBounds
+    print(drawingView2.outOfBounds)
+    print(testResult.Oresult)
+    /*
+    let resultVC = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+    resultVC.resultAOutOfBounds = drawingView.outOfBounds
+    navigationController?.pushViewController(resultVC, animated: true)
+    print(drawingView2.outOfBounds)
+    */
+    /*
         print(drawingView.outOfBounds)
         print(drawingView.inBounds)
         var message: String?
@@ -27,13 +38,15 @@ class DrawViewController: UIViewController {
         
         let alert = UIAlertController(title: "Results", message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: drawingView.clear)
+        self.present(alert, animated: true, completion: drawingView.clear) */
         
-    } */
+    }
 	override func viewDidLoad() {
 		super.viewDidLoad()
         multiplierForDecision = 10
-        drawingView2.Correction = 30
+        
+        //drawingView.Correction = 30
+        //drawingView2.Correction = 30
 
 		// Do any additional setup after loading the view, typically from a nib.
 	}
@@ -42,6 +55,8 @@ class DrawViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+    
+
 
 }
 

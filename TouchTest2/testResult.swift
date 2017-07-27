@@ -10,4 +10,5 @@
 //creating a global struct so that it can be shared across the different views when you click next
 struct testResult {
     static var tempVal = [Int : Double]() //you need it to be static to work
+    static var Oresult = Int()
 }

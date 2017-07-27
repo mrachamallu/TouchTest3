@@ -15,7 +15,7 @@ class DrawingView: UIView {
 	var lineWidth: CGFloat = 5
     var outOfBounds: Int = 0 //use to track if it goes out of bounds
     var inBounds: Int = 0 //^^ in bounds
-    var Correction: CGFloat = 0
+    var Correction: CGFloat = 30
 	
 	private var lastPoint: CGPoint!
 	private var bezierPath: UIBezierPath!

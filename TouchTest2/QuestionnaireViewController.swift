@@ -11,6 +11,12 @@ import JMMarkSliderSwift
 
 class QuestionnaireViewController: UIViewController {
 
+    
+
+    
+    @IBAction func nextSetofQuestions(_ sender: UIButton) {
+        
+    }
     @IBOutlet weak var question1: JMMarkSlider!
     @IBOutlet weak var question2: JMMarkSlider!
     @IBOutlet weak var question3: JMMarkSlider!
