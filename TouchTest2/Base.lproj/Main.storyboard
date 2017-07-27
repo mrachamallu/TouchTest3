@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDe-2T-Wb5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165.59999999999999" y="36.431784107946029"/>
+            <point key="canvasLocation" x="1" y="635"/>
         </scene>
         <!--Draw Test View Controller-->
         <scene sceneID="T3X-ns-9AS">
@@ -121,7 +121,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rlR-9q-PrX" kind="unwind" unwindAction="homeWithSegue:" id="TTi-d1-UN1"/>
+                                    <segue destination="rlR-9q-PrX" kind="unwind" unwindAction="depDirectionWithSegue:" id="A7H-z5-0OY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXt-86-dOj">
@@ -163,7 +163,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUc-XZ-15Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="rlR-9q-PrX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="948" y="321.58920539730138"/>
+            <point key="canvasLocation" x="948" y="304"/>
         </scene>
         <!--Questionnaire View Controller-->
         <scene sceneID="Bd2-i7-aue">
@@ -437,7 +437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VN0-8B-qnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="-361.16941529235385"/>
+            <point key="canvasLocation" x="948" y="-421"/>
         </scene>
         <!--Questionnaire View Controller-->
         <scene sceneID="FBo-Gq-2ab">
@@ -811,6 +811,9 @@ a o</string>
                                                 <state key="normal" title="&lt; Home ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="SdG-hi-r9L" kind="unwind" unwindAction="AToHomeWithSegue:" id="00a-Za-rTE"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depression Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmW-ne-1fl">
                                                 <rect key="frame" x="124" y="0.0" width="124" height="50"/>
@@ -862,6 +865,7 @@ a o</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gva-0u-lFL" sceneMemberID="firstResponder"/>
+                <exit id="SdG-hi-r9L" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1677.5999999999999" y="1012.4437781109445"/>
         </scene>
@@ -885,7 +889,7 @@ a o</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UKS-Ca-k7T" kind="unwind" unwindAction="homeWithSegue:" id="nwc-5j-sYu"/>
+                                    <segue destination="UKS-Ca-k7T" kind="unwind" unwindAction="touchDirectionWithSegue:" id="zt4-eh-dvq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfF-J5-PP8">
@@ -993,6 +997,9 @@ a o</string>
                                         <state key="normal" title="&lt; Home ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="CFT-Gs-oVN" kind="unwind" unwindAction="OToHomeWithSegue:" id="C3R-p2-2bm"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depression Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67v-cV-7s8">
                                         <rect key="frame" x="124" y="0.0" width="124" height="50"/>
@@ -1010,7 +1017,7 @@ a o</string>
                                         </state>
                                         <connections>
                                             <action selector="resultButton:" destination="Lb3-au-5fw" eventType="touchUpInside" id="ew0-ZN-LWO"/>
-                                            <segue destination="Mzi-mT-MVF" kind="presentation" id="M4S-Lq-Rsn"/>
+                                            <segue destination="Mzi-mT-MVF" kind="presentation" identifier="getResult" id="M4S-Lq-Rsn"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1036,6 +1043,7 @@ a o</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgy-PH-96j" sceneMemberID="firstResponder"/>
+                <exit id="CFT-Gs-oVN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2388" y="1013"/>
         </scene>
@@ -1059,7 +1067,7 @@ a o</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="oWl-9Z-hAc" kind="unwind" unwindAction="homeWithSegue:" id="oZq-9O-Ajo"/>
+                                    <segue destination="oWl-9Z-hAc" kind="unwind" unwindAction="resultToHomeWithSegue:" id="zWn-Te-VJe"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Results" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VJ0-wd-Hcc">
@@ -1069,28 +1077,14 @@ a o</string>
                                 <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="36"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUA-hA-JrS">
-                                <rect key="frame" x="16" y="432" width="343" height="100"/>
-                                <color key="backgroundColor" red="0.38307932020000002" green="0.61932766439999998" blue="0.63142788409999995" alpha="0.70379387839999996" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="yTf-5q-PWb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="35"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.78032428026199341" green="0.94632214307785034" blue="0.94127291440963745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VJ0-wd-Hcc" firstAttribute="top" secondItem="USe-Q3-z0D" secondAttribute="bottom" constant="35" id="24L-4l-1tT"/>
                             <constraint firstItem="PZt-jq-dWX" firstAttribute="leading" secondItem="s37-mX-lTo" secondAttribute="leading" constant="8" id="2Br-SG-g5H"/>
-                            <constraint firstItem="FUA-hA-JrS" firstAttribute="centerX" secondItem="VJ0-wd-Hcc" secondAttribute="centerX" id="MUV-cm-rzh"/>
                             <constraint firstItem="VJ0-wd-Hcc" firstAttribute="leading" secondItem="s37-mX-lTo" secondAttribute="leadingMargin" constant="14" id="NeP-IV-eLR"/>
                             <constraint firstItem="wvv-BS-6nd" firstAttribute="top" secondItem="PZt-jq-dWX" secondAttribute="bottom" constant="8" id="SI7-sC-sAt"/>
                             <constraint firstItem="VJ0-wd-Hcc" firstAttribute="centerY" secondItem="s37-mX-lTo" secondAttribute="centerY" constant="-117.5" id="VmC-3J-Nsr"/>
-                            <constraint firstItem="FUA-hA-JrS" firstAttribute="leading" secondItem="s37-mX-lTo" secondAttribute="leadingMargin" id="eou-DL-AZu"/>
-                            <constraint firstItem="FUA-hA-JrS" firstAttribute="top" secondItem="VJ0-wd-Hcc" secondAttribute="bottom" constant="55" id="iyc-jh-CbS"/>
                             <constraint firstItem="VJ0-wd-Hcc" firstAttribute="centerX" secondItem="s37-mX-lTo" secondAttribute="centerX" id="p5Q-PL-ebZ"/>
                         </constraints>
                     </view>

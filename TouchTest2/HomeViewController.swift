@@ -11,24 +11,24 @@ import UIKit
 class HomeViewController: UIViewController {
 
     //returns to home screen when you click exit button on the info pop-up
-    @IBAction func close(segue:UIStoryboardSegue) {
+    @IBAction func depDirection(segue:UIStoryboardSegue) {
         
     }
     
     //returns to home screen when you click home button
-    @IBAction func home(segue:UIStoryboardSegue) {
+    @IBAction func touchDirection(segue:UIStoryboardSegue) {
         
     }
     
-    @IBAction func testToHome(segue:UIStoryboardSegue) {
+    @IBAction func AToHome(segue:UIStoryboardSegue) {
         
     }
     
-    @IBAction func testToHome2(segue:UIStoryboardSegue) {
+    @IBAction func OToHome(segue:UIStoryboardSegue) {
         
     }
     
-    @IBAction func testToHome3(segue:UIStoryboardSegue) {
+    @IBAction func resultToHome(segue:UIStoryboardSegue) {
         
     }
     override func viewDidLoad() {
