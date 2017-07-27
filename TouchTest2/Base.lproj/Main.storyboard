@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jmn-Lb-4Kb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m12-vc-p8k">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -124,13 +124,6 @@
                                     <segue destination="rlR-9q-PrX" kind="unwind" unwindAction="homeWithSegue:" id="TTi-d1-UN1"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Directions" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jfo-39-lWX">
-                                <rect key="frame" x="66" y="182" width="242" height="195"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.43889826539999999" green="0.72530204060000003" blue="0.73068130019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="36"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXt-86-dOj">
                                 <rect key="frame" x="16" y="432" width="343" height="100"/>
                                 <color key="backgroundColor" red="0.38307932020000002" green="0.61932766439999998" blue="0.63142788409999995" alpha="0.70379387839999996" colorSpace="custom" customColorSpace="displayP3"/>
@@ -145,16 +138,23 @@
                                     <segue destination="xvh-ES-cJe" kind="presentation" id="1IT-c2-HXE"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="In the following screens move the slider to indicate your condition" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jfo-39-lWX">
+                                <rect key="frame" x="30" y="103" width="315" height="253"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.43889826539999999" green="0.72530204060000003" blue="0.73068130019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="36"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.78032428026199341" green="0.94632214307785034" blue="0.94127291440963745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vXt-86-dOj" firstAttribute="top" secondItem="jfo-39-lWX" secondAttribute="bottom" constant="55" id="53j-Kh-XnO"/>
+                            <constraint firstItem="vXt-86-dOj" firstAttribute="top" secondItem="jfo-39-lWX" secondAttribute="bottom" constant="76" id="53j-Kh-XnO"/>
                             <constraint firstItem="KS4-Yc-pnu" firstAttribute="leading" secondItem="kkp-Iq-pNf" secondAttribute="leading" constant="8" id="6Go-f4-NDt"/>
-                            <constraint firstItem="jfo-39-lWX" firstAttribute="leading" secondItem="kkp-Iq-pNf" secondAttribute="leadingMargin" constant="50" id="911-7l-ewq"/>
+                            <constraint firstItem="jfo-39-lWX" firstAttribute="leading" secondItem="kkp-Iq-pNf" secondAttribute="leadingMargin" constant="14" id="911-7l-ewq"/>
                             <constraint firstItem="vXt-86-dOj" firstAttribute="leading" secondItem="kkp-Iq-pNf" secondAttribute="leadingMargin" id="SbV-60-ZUd"/>
-                            <constraint firstItem="jfo-39-lWX" firstAttribute="centerY" secondItem="kkp-Iq-pNf" secondAttribute="centerY" constant="-54" id="U56-eL-ElR"/>
+                            <constraint firstItem="jfo-39-lWX" firstAttribute="centerY" secondItem="kkp-Iq-pNf" secondAttribute="centerY" constant="-104" id="U56-eL-ElR"/>
                             <constraint firstItem="jfo-39-lWX" firstAttribute="centerX" secondItem="kkp-Iq-pNf" secondAttribute="centerX" id="ZXa-sb-BHC"/>
-                            <constraint firstItem="jfo-39-lWX" firstAttribute="top" secondItem="ANI-TB-ivm" secondAttribute="bottom" constant="162" id="bPx-pO-4ds"/>
+                            <constraint firstItem="jfo-39-lWX" firstAttribute="top" secondItem="ANI-TB-ivm" secondAttribute="bottom" constant="83" id="bPx-pO-4ds"/>
                             <constraint firstItem="vXt-86-dOj" firstAttribute="centerX" secondItem="jfo-39-lWX" secondAttribute="centerX" id="fsl-7X-ncw"/>
                             <constraint firstItem="E4h-Nt-dU3" firstAttribute="top" secondItem="KS4-Yc-pnu" secondAttribute="bottom" constant="8" id="jyN-oh-Igw"/>
                         </constraints>
@@ -163,7 +163,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUc-XZ-15Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="rlR-9q-PrX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="948" y="322"/>
+            <point key="canvasLocation" x="948" y="321.58920539730138"/>
         </scene>
         <!--Questionnaire View Controller-->
         <scene sceneID="Bd2-i7-aue">
@@ -312,6 +312,13 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_____________________________________________________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2K-ST-U5K">
+                                <rect key="frame" x="16" y="105" width="345" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="13"/>
+                                <color key="textColor" red="0.31499565969999999" green="0.59251929650000001" blue="0.67750736079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.78032428026199341" green="0.94632214307785034" blue="0.94127291440963745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -400,7 +407,7 @@
                                 </constraints>
                                 <state key="normal" title="exit" image="cross"/>
                                 <connections>
-                                    <segue destination="uUv-Dc-jN3" kind="unwind" unwindAction="closeWithSegue:" id="1Ve-29-0Az"/>
+                                    <segue destination="m12-vc-p8k" kind="show" id="SpF-5A-Exr"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Created by Ayush Patel and Meera Rachamallu" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Qf-9l-P2m">
@@ -429,7 +436,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VN0-8B-qnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="uUv-Dc-jN3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="948" y="-361.16941529235385"/>
         </scene>
@@ -1057,7 +1063,7 @@ a o</string>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Results" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VJ0-wd-Hcc">
-                                <rect key="frame" x="66" y="182" width="242" height="195"/>
+                                <rect key="frame" x="30" y="55" width="315" height="322"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.43889826539999999" green="0.72530204060000003" blue="0.73068130019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="36"/>
@@ -1077,12 +1083,12 @@ a o</string>
                         </subviews>
                         <color key="backgroundColor" red="0.78032428026199341" green="0.94632214307785034" blue="0.94127291440963745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VJ0-wd-Hcc" firstAttribute="top" secondItem="USe-Q3-z0D" secondAttribute="bottom" constant="162" id="24L-4l-1tT"/>
+                            <constraint firstItem="VJ0-wd-Hcc" firstAttribute="top" secondItem="USe-Q3-z0D" secondAttribute="bottom" constant="35" id="24L-4l-1tT"/>
                             <constraint firstItem="PZt-jq-dWX" firstAttribute="leading" secondItem="s37-mX-lTo" secondAttribute="leading" constant="8" id="2Br-SG-g5H"/>
                             <constraint firstItem="FUA-hA-JrS" firstAttribute="centerX" secondItem="VJ0-wd-Hcc" secondAttribute="centerX" id="MUV-cm-rzh"/>
-                            <constraint firstItem="VJ0-wd-Hcc" firstAttribute="leading" secondItem="s37-mX-lTo" secondAttribute="leadingMargin" constant="50" id="NeP-IV-eLR"/>
+                            <constraint firstItem="VJ0-wd-Hcc" firstAttribute="leading" secondItem="s37-mX-lTo" secondAttribute="leadingMargin" constant="14" id="NeP-IV-eLR"/>
                             <constraint firstItem="wvv-BS-6nd" firstAttribute="top" secondItem="PZt-jq-dWX" secondAttribute="bottom" constant="8" id="SI7-sC-sAt"/>
-                            <constraint firstItem="VJ0-wd-Hcc" firstAttribute="centerY" secondItem="s37-mX-lTo" secondAttribute="centerY" constant="-54" id="VmC-3J-Nsr"/>
+                            <constraint firstItem="VJ0-wd-Hcc" firstAttribute="centerY" secondItem="s37-mX-lTo" secondAttribute="centerY" constant="-117.5" id="VmC-3J-Nsr"/>
                             <constraint firstItem="FUA-hA-JrS" firstAttribute="leading" secondItem="s37-mX-lTo" secondAttribute="leadingMargin" id="eou-DL-AZu"/>
                             <constraint firstItem="FUA-hA-JrS" firstAttribute="top" secondItem="VJ0-wd-Hcc" secondAttribute="bottom" constant="55" id="iyc-jh-CbS"/>
                             <constraint firstItem="VJ0-wd-Hcc" firstAttribute="centerX" secondItem="s37-mX-lTo" secondAttribute="centerX" id="p5Q-PL-ebZ"/>
@@ -1095,7 +1101,7 @@ a o</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTZ-LO-bIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="oWl-9Z-hAc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3121" y="1012"/>
+            <point key="canvasLocation" x="3120.8000000000002" y="1011.544227886057"/>
         </scene>
     </scenes>
     <resources>
