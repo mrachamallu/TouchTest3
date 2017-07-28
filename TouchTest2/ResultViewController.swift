@@ -16,17 +16,20 @@ class ResultViewController: UIViewController {
     var limitForDisease = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(testResult.Oresult) //DOESNT WORK BC GETS CALLED BEFORE Oresult is passed in
-        if (testResult.Oresult > limitForDisease)
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if (testResult.Oresult == "disorder" && testResult.Aresult == "disorder")
         {
             resultText.text = String("Results suggest that you should consider consulting a licensed physician")
         }else {
             resultText.text = String("Results indicate that you are not at risk for a motor disease")
         }
         
-        // Do any additional setup after loading the view.
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

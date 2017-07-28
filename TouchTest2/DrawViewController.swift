@@ -14,17 +14,21 @@ class DrawViewController: UIViewController {
     @IBOutlet weak var drawingView2: DrawingView2!
     var multiplierForDecision: Int?
 	
-    
+    @IBAction func nextButton(_ sender: Any) {
+        if (drawingView.outOfBounds * multiplierForDecision! > drawingView.inBounds){
+            testResult.Aresult = "disorder"
+        }
+        else{
+            testResult.Aresult = "healthy"
+        }
+    }
    @IBAction func resultButton(_ sender: Any) {
-    testResult.Oresult = drawingView2.outOfBounds
-    print(drawingView2.outOfBounds)
-    print(testResult.Oresult)
-    /*
-    let resultVC = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
-    resultVC.resultAOutOfBounds = drawingView.outOfBounds
-    navigationController?.pushViewController(resultVC, animated: true)
-    print(drawingView2.outOfBounds)
-    */
+    if (drawingView2.outOfBounds * multiplierForDecision! > drawingView2.inBounds){
+        testResult.Oresult = "disorder"
+    }
+    else{
+        testResult.Oresult = "healthy"
+    }
     /*
         print(drawingView.outOfBounds)
         print(drawingView.inBounds)

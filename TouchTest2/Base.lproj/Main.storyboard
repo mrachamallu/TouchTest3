@@ -830,6 +830,7 @@ a o</string>
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="nextButton:" destination="VfJ-M7-6WR" eventType="touchUpInside" id="UXs-Fa-KHA"/>
                                                     <segue destination="Lb3-au-5fw" kind="presentation" id="dYN-sO-xgc"/>
                                                 </connections>
                                             </button>
