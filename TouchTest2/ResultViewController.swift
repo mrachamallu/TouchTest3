@@ -22,12 +22,26 @@ class ResultViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
         if (testResult.Oresult == "disorder" && testResult.Aresult == "disorder")
         {
             resultText.text = String("Results suggest that you should consider consulting a licensed physician")
         }else {
             resultText.text = String("Results indicate that you are not at risk for a motor disease")
         }
+        if (testResult.totalDepValue >= 50)
+        {
+            resultText.text = String("Results suggest that you should consider consulting a licensed physician")
+            testResult.totalDepValue = -0.5
+        }
+        else if (testResult.totalDepValue < 0)
+        {
+            print()
+        }else {
+            resultText.text = String("Results indicate that you are not at risk for depression")
+            testResult.totalDepValue = -0.5
+        }
+
         
     }
     override func didReceiveMemoryWarning() {

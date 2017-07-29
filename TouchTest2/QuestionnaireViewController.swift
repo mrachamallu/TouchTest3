@@ -36,10 +36,18 @@ class QuestionnaireViewController: UIViewController {
     var totalVal = Double()
     
     @IBAction func finalButton(_ sender: Any) {
-        //using a dictionary here so that we don't get a out of index error
+        //using a dictionary here so that we don't get an out of index error
+        
         for (_, value) in testResult.tempVal {
-            totalVal += value
+            if (value == 5)
+            {
+                totalVal += (value * 2)
+            }
+            else {
+                totalVal += value
+            }
         }
+        testResult.totalDepValue = totalVal
     }
     
     @IBAction func question1changed(sender: JMMarkSlider) {
