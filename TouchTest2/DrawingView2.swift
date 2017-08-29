@@ -59,8 +59,11 @@ class DrawingView2: UIView {
         bezierPath.addLine(to: newPoint)
         lastPoint = newPoint
         //O isnt actually at center NEED TO FIX THIS POINT
-        let centerX = Double(UIScreen.main.bounds.maxX / 2)
-        let centerY = Double(UIScreen.main.bounds.maxY / 2)
+//        let centerX = Double(UIScreen.main.bounds.maxX / 2)
+//        let centerY = Double(UIScreen.main.bounds.maxY / 2)
+        let centerX = 180.0
+        let centerY = 315.0
+
         let RADIUS = 159.0
         
         //print(centerX)
@@ -79,6 +82,7 @@ class DrawingView2: UIView {
         if (distFromOrigin < RADIUS - Double(Correction) || distFromOrigin > RADIUS + Double(Correction))
         {
             outOfBounds += 1
+            testResult.outOfBoundsA += 1
             AudioServicesPlaySystemSound(1200)
             print("1200")
         }

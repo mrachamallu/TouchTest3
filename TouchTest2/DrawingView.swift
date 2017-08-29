@@ -71,6 +71,7 @@ class DrawingView: UIView {
             || (lastPoint.x < 25 - Correction) || (lastPoint.x > 315 + Correction))
         {
             outOfBounds += 1
+            testResult.outOfBoundsA += 1
             AudioServicesPlaySystemSound(1200)
             print("1200")
         }
@@ -96,6 +97,7 @@ class DrawingView: UIView {
         else
         {
             outOfBounds += 1
+            testResult.outOfBoundsA += 1
             AudioServicesPlaySystemSound(1204)
             print("1204")
         }

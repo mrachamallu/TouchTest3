@@ -15,4 +15,5 @@ struct testResult {
     static var Aresult = String()
     static var Oresult = String()
     static var totalDepValue = -0.5
+    static var outOfBoundsA = 0;
 }

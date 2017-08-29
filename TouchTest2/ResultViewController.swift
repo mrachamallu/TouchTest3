@@ -25,9 +25,9 @@ class ResultViewController: UIViewController {
 
         if (testResult.Oresult == "disorder" && testResult.Aresult == "disorder")
         {
-            resultText.text = String("Results suggest that you should consider consulting a licensed physician")
+            resultText.text = String("Results suggest that you should consider consulting a licensed physician. The total number of times you drew outside the lines was ") + String(describing:testResult.outOfBoundsA) + String(" times.")
         }else {
-            resultText.text = String("Results indicate that you are not at risk for a motor disease")
+            resultText.text = String("Results indicate that you are not at risk for a motor disease. The total number of times you drew outside the lines was ") + String(describing:testResult.outOfBoundsA) + String(" times.")
         }
         if (testResult.totalDepValue >= 50)
         {
